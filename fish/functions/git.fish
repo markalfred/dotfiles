@@ -1,3 +1,6 @@
+# Imports
+. $fish_path/utils/base_utils.fish
+
 function git
   if [ (count $argv) -gt 0 ]
     command git $argv
@@ -12,8 +15,6 @@ function git
 
       if [ (_from_ctrl_d) ]
         echo (set_color normal)
-      end
-      if [ (_from_ctrl_d) ]
         fish_prompt
       end
       functions -e exit
