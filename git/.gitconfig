@@ -1,0 +1,31 @@
+[user]
+	email = mark@mojotech.com
+	name = Mark Battersby
+[color]
+	ui = true
+[core]
+	editor = subl -ws
+	excludesfile = ~/.config/git/.gitignore_global
+[push]
+	default = current
+[rerere]
+	enabled = 1
+[difftool "sourcetree"]
+[mergetool "sourcetree"]
+
+
+[alias]
+	c = checkout
+	f = fetch
+	p = pull
+	r = rebase
+	s = status --short
+
+	c- = checkout -
+	cb = checkout -b
+	cB = checkout -B
+	cm = checkout master
+	rc = rebase --continue
+	rem = rebase master
+	rpo = remote prune origin
+	up = !git fetch && git checkout master && git pull && git checkout -
