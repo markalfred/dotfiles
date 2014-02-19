@@ -1,0 +1,9 @@
+{
+    "git_commit_verbose": true,
+    "git_commit_pedantic": true,
+
+    "git_extensions": {
+        "git_flow": false,
+        "legit": false
+    }
+}
