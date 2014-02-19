@@ -1,2 +1,4 @@
+source ~/.config/tig/keybindings-reset.tigrc
+source ~/.config/tig/keybindings.tigrc
 source ~/.config/tig/colorscheme.tigrc
 source ~/.config/tig/settings.tigrc
