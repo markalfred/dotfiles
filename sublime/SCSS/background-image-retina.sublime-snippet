@@ -1,0 +1,6 @@
+<snippet>
+  <content><![CDATA[
+@include background-image-retina('${1:in_app/}${2:name}', '${3:png}'${4:, ${5:${6:10}px, ${0:10}px}});
+]]></content>
+  <tabTrigger>bir</tabTrigger>
+</snippet>
