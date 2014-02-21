@@ -1,12 +1,14 @@
 {
 	"installed_packages":
 	[
+		"Base16 Color Schemes",
 		"Better CoffeeScript",
 		"GitGutter",
 		"MacTerminal",
 		"Sass",
 		"SublimeGit",
 		"Theme - Flatland",
+		"Theme - Spacegray",
 		"Tomorrow Color Schemes"
 	]
 }
