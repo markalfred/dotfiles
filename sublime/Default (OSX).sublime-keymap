@@ -17,10 +17,15 @@
   { "keys": ["alt+shift+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
   { "keys": ["alt+shift+g"], "command": "replace_next" },
 
-  // SublimeGit Status.
+  // SublimeGit.
   { "keys": ["super+alt+shift+s"], "command": "git_status"},
   { "keys": ["g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "},
-      "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+    "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-commit" }]},
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
 
   // Home + End keys.
   { "keys": ["home"], "command": "move_to", "args": {"to": "bol", "extend": false} },
