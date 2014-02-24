@@ -1,0 +1,52 @@
+#!/bin/bash
+# Loop through all folders in the Media Library/TV Shows directory.
+# Find any files in the Completed Downloads directory that match a given
+# directory name, and move the matched file to this directory.
+
+# Matches should be case insensitive.
+shopt -s nocasematch
+
+# TV Shows folder in Media Library directory:
+shows="$HOME/Downloads/TV Shows"
+
+# Completed Downloads folder:
+downloads="$HOME/Torrents - Complete"
+
+# Loop through Shows folders, rather than Downloaded files.
+for i in "$shows"/*
+
+do
+  # Show name is fullpath minus $shows.
+  i=${i/"$shows"/}
+  # Remove any trailing slashes.
+  i=${i///}
+  dirtitle="$i"
+  # Remove any non-alpha characters.
+  # In this case, spaces are the only potential non-alphas.
+  while [ "$dirtitle" != "${dirtitle/ /}" ]
+  do
+    dirtitle=${dirtitle/ /}
+  done
+
+  # Look for matches in downloaded files.
+  for j in "$downloads"/*
+  do
+    j=${j/"$downloads"/}
+    j=${j///}
+    filetitle="$j"
+    # Remove any non-alpha characters.
+    while [ "$filetitle" != "${filetitle/[^A-Za-z]/}" ]
+    do
+      filetitle=${filetitle/[^A-Za-z]/}
+    done
+
+    # Match if file title starts with dir title.
+    # ie. AdventureTimeSELeetDudez == AdventureTime
+    if [[ $filetitle == $dirtitle* ]]
+    then
+      # Use $i and $j, the original, unchanged folder and file names.
+      echo "Moving $downloads/$j to $shows/$i/$j"
+      mv "$downloads/$j" "$shows/$i/$j"
+    fi
+  done
+done

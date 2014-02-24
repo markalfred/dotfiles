@@ -1,0 +1,33 @@
+tasks:
+  tv shows:
+    rss: http://ezrss.it/feed/
+
+    series:
+
+      # For me.
+      - Adventure Time
+      - American Horror Story
+      - Brody Stevens Enjoy It
+      - Drunk History
+      - Game of Thrones:
+          quality: 720p
+      - Louie
+      - Mad Men
+      - South Park
+      - The Colbert Report
+      - The Daily Show
+      - Through the Wormhole
+      - VICE
+
+      # For the chick.
+      - Girls
+      - Modern Family
+      - Parenthood
+      - The Voice
+
+    transmission:
+      host: localhost
+      port: 9091
+      removewhendone: False
+      ratio: 2.0
+      addpaused: No
