@@ -27,6 +27,11 @@
   { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
   { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
 
+  { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+  { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
+  { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
+  { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
+
   // Home + End keys.
   { "keys": ["home"], "command": "move_to", "args": {"to": "bol", "extend": false} },
   { "keys": ["end"], "command": "move_to", "args": {"to": "eol", "extend": false} },
