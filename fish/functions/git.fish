@@ -1,6 +1,3 @@
-# Imports
-. $fish_path/utils/base_utils.fish
-
 function git
   if [ (count $argv) -gt 0 ]
     command git $argv

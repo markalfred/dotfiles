@@ -8,3 +8,7 @@ set -U WORK_DIR $HOME/Repos
 
 # Set fish's path.
 set fish_path $HOME/.config/fish
+
+# Imports.
+source $fish_path/utils/base_utils.fish
+source $fish_path/utils/git_utils.fish

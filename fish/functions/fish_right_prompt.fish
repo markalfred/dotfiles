@@ -1,8 +1,3 @@
-# Imports
-. $fish_path/utils/base_utils.fish
-. $fish_path/utils/git_utils.fish
-
-
 function fish_right_prompt
   set -l red (set_color red)
   set -l green (set_color green)

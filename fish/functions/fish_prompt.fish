@@ -1,6 +1,3 @@
-# Imports
-. $fish_path/utils/base_utils.fish
-
 function fish_prompt
   set -l normal (set_color normal)
   set -l dark_gray (set_color 465)
