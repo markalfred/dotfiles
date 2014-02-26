@@ -19,15 +19,17 @@
 
   // SublimeGit.
   { "keys": ["super+ctrl+s"], "command": "git_status"},
-  { "keys": ["g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "},
+  { "keys": [" "], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "},
     "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+
+  { "keys": [","], "command": "git_custom", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
 
   { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-commit" }]},
   { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
   { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
   { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
 
-  { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+  { "keys": ["q", "q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
