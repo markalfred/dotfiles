@@ -26,6 +26,11 @@ function _git_stash_is_on_current_branch
   echo (command git stash list --grep (_git_branch_name) ^/dev/null)
 end
 
+function _git_branch_has_upstream
+  command git show "@{u}" >/dev/null 2>/dev/null
+  return $status
+end
+
 function _git_behind_by
   echo (command git rev-list --left-right "@{u}..." | grep -c '<')
 end

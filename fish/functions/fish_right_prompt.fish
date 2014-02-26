@@ -37,11 +37,13 @@ function fish_right_prompt
     end
     print (_git_branch_name)
 
-    if [ (_git_behind_by) -gt 0 ]
-      print $dark_gray '-' $red (_git_behind_by)
-    end
-    if [ (_git_ahead_by) -gt 0 ]
-      print $dark_gray '+' $green (_git_ahead_by)
+    if _git_branch_has_upstream
+      if [ (_git_behind_by) -gt 0 ]
+        print $dark_gray '-' $red (_git_behind_by)
+      end
+      if [ (_git_ahead_by) -gt 0 ]
+        print $dark_gray '+' $green (_git_ahead_by)
+      end
     end
   end
 
