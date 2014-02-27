@@ -6,6 +6,8 @@
 
   { "keys": ["super+semicolon"], "command": "move_to", "args": {"to": "eol", "extend": false} },
 
+  { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" },
+
   // Swap selections.
   { "keys": ["ctrl+r"], "command": "permute_selection", "args": {"operation": "reverse"} },
 
