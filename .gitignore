@@ -6,3 +6,7 @@ Package Control.last-run
 Package Control.system-ca-bundle
 
 configstore/
+
+flexget/private/imdb-settings.yml
+flexget/db-config.sqlite
+flexget/flexget.log
