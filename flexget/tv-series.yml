@@ -1,0 +1,27 @@
+series:
+  all-shows:
+    # For me.
+    - Adventure Time
+    - American Horror Story
+    - Brody Stevens Enjoy It
+    - Drunk History
+    - Game of Thrones:
+        quality: 720p
+    - Louie
+    - Mad Men
+    - South Park
+    - The Colbert Report
+    - The Daily Show
+    - Through the Wormhole
+    - VICE
+
+    # For the chick.
+    - Girls
+    - Modern Family
+    - Parenthood
+    - The Voice
+
+  settings:
+    all-shows:
+      set:
+        path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"

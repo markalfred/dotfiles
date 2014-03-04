@@ -1,33 +1,44 @@
-tasks:
-  tv shows:
-    rss: http://showrss.info/feeds/all.rss
+templates:
+  tv:
+    transmission: yes
+    # Import my TV series and series settings.
+    include: tv-series.yml
+    inputs:
+      - rss: { url: 'http://showrss.info/feeds/all.rss', silent: yes }          # ShowRSS
+      - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
+      - rss: { url: 'http://torrentz.eu/feed_verified?q=tv', silent: yes }      # Torrentz (Verified only, TV)
+      - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }            # BT-Chat (EZTV)
 
-    series:
 
-      # For me.
-      - Adventure Time
-      - American Horror Story
-      - Brody Stevens Enjoy It
-      - Drunk History
-      - Game of Thrones:
-          quality: 720p
-      - Louie
-      - Mad Men
-      - South Park
-      - The Colbert Report
-      - The Daily Show
-      - Through the Wormhole
-      - VICE
-
-      # For the chick.
-      - Girls
-      - Modern Family
-      - Parenthood
-      - The Voice
-
+  movie:
     transmission:
-      host: localhost
-      port: 9091
-      removewhendone: False
-      ratio: 2.0
-      addpaused: No
+      path: /Users/mark/Movies
+    quality: dvdrip+ # No screeners, no cams.
+    torrent_alive: 10 # Ignore torrents with less than 10 seeds.
+
+
+tasks:
+  download-tv-shows:
+    priority: 1
+    template: tv
+
+
+  build-movie-queue:
+    priority: 2
+    accept_all: yes
+    queue_movies: yes
+    # Import my IMDB Watchlist.
+    include: private/imdb-settings.yml
+
+
+  download-movie-queue:
+    priority: 3
+    interval: 2 hours
+    movie_queue: yes
+    template: movie
+    # Search for all movie-queue entires in torrentz.
+    discover:
+      what:
+        - emit_movie_queue: yes
+      from:
+        - torrentz: verified
