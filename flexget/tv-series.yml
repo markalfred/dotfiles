@@ -24,4 +24,4 @@ series:
   settings:
     all-shows:
       set:
-        path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
+        path: "/Users/mark/Downloads/TV Shows/{{series_name}}/Season {{series_season}}/"

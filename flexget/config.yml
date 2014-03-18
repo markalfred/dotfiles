@@ -12,8 +12,8 @@ templates:
 
   movie:
     transmission:
-      path: /Users/mark/Movies
-    quality: dvdrip+ # No screeners, no cams.
+      path: /Users/mark/Downloads/Movies
+    quality: dvdrip+ <1080p # No screeners, no cams.
     torrent_alive: 10 # Ignore torrents with less than 10 seeds.
 
 
