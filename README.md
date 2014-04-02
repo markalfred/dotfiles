@@ -5,9 +5,11 @@
 
 Contains configuration for:
 * Git
-* Tig
+* Tig (but not really)
 * Fish
 * Sublime
+* Flexget
+* Slate
 
 Use symlinks to keep all config in the same directory.
 
