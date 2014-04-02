@@ -10,3 +10,5 @@ configstore/
 flexget/private/imdb-settings.yml
 flexget/db-config.sqlite
 flexget/flexget.log
+
+roots/
