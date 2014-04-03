@@ -551,7 +551,7 @@
 			<key>name</key>
 			<string>Git Shas</string>
 			<key>scope</key>
-			<string>source.git-show.commit.sha, entity.other.git-status.hex, meta.diff.git-diff.header.extended.index.from-sha, meta.diff.git-diff.header.extended.index.to-sha</string>
+			<string>source.git-show.commit.sha, entity.other.git-status.hex, entity.other.git-blame.hex, meta.diff.git-diff.header.extended.index.from-sha, meta.diff.git-diff.header.extended.index.to-sha</string>
 			<key>settings</key>
 			<dict>
 			<key>foreground</key>
