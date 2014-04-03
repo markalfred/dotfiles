@@ -7,15 +7,15 @@ function _git_is_dirty
 end
 
 function _git_has_staged_changes
-  echo (command git status | grep '# Changes to be committed:' ^/dev/null)
+  echo (command git status | grep 'Changes to be committed:' ^/dev/null)
 end
 
 function _git_has_unstaged_changes
-  echo (command git status | grep '# Changes not staged for commit:' ^/dev/null)
+  echo (command git status | grep 'Changes not staged for commit:' ^/dev/null)
 end
 
 function _git_has_untracked_files
-  echo (command git status | grep '# Untracked files:' ^/dev/null)
+  echo (command git status | grep 'Untracked files:' ^/dev/null)
 end
 
 function _git_has_stash
