@@ -22,7 +22,11 @@ function fish_right_prompt
 
   # Then, show Current Directory / Project.
   print $dark_gray
-  pwd | sed -e "s|$WORK_DIR/||" -e "s|^$HOME|~|"
+  if [ (_in_git_repo) ]
+    print (_git_repo_name)(_git_subdirectory)
+  else
+    print (pwd | sed -e "s|^$HOME|~|")
+  end
 
   # Finally, show git branch and dirty state.
   if [ (_git_branch_name) ]

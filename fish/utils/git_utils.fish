@@ -1,5 +1,17 @@
+function _in_git_repo
+  echo (command git rev-parse --is-inside-work-tree 2> /dev/null)
+end
+
+function _git_repo_name
+  echo (basename (command git rev-parse --show-toplevel 2> /dev/null) 2> /dev/null)
+end
+
+function _git_subdirectory
+  echo (_sanitized_path (command git rev-parse --show-prefix 2> /dev/null))
+end
+
 function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+  echo (command git symbolic-ref --short HEAD ^/dev/null)
 end
 
 function _git_is_dirty
