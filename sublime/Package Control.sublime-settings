@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"AAAPackageDev",
 		"All Autocomplete",
 		"Better CoffeeScript",
 		"DashDoc",
