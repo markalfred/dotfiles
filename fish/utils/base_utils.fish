@@ -11,3 +11,11 @@ end
 function _sanitized_path
   echo /$argv | sed -e 's|/$||'
 end
+
+function _current_directory
+  if [ (_in_git_repo) ]
+    print (_git_repo_name)(_git_subdirectory)
+  else
+    print (pwd | sed -e "s|^$HOME|~|")
+  end
+end
