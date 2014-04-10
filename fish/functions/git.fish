@@ -9,11 +9,7 @@ function git
     # Allow graceful exit back to default prompt.
     function exit
       set -e interactive_git_mode
-
-      if [ (_from_ctrl_d) ]
-        echo (set_color normal)
-        fish_prompt
-      end
+      commandline -r ''
       functions -e exit
     end
   end
