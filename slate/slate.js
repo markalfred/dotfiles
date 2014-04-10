@@ -135,3 +135,11 @@ slate.bind(chord(LEADER, 'm'), function focusLast(w) {
     }
   });
 });
+
+slate.bind("space:ctrl", function toggleTerm(win) {
+  if (win.app().name() === 'iTerm') {
+    win.doOperation(slate.operation("hide", {"app" : 'iTerm'}));
+  } else {
+    win.doOperation(slate.operation("focus", {"app" : 'iTerm'}));
+  }
+});
