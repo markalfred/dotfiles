@@ -105,7 +105,7 @@ slate.bind(chord('toggle', LEADER, 'w'), slate.operation('throw', {
 }));
 
 slate.bind(chord(LEADER, 's'), slate.operation('hint', {
-  'characters': 'EOTNIADS'
+  'characters': 'FJDKSLA'
 }));
 
 slate.bind(chord(LEADER, 'o'), function hideMost(w) {
