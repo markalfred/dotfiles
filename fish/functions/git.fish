@@ -10,6 +10,7 @@ function git
     function exit
       set -e interactive_git_mode
       commandline -r ''
+      commandline -f repaint
       functions -e exit
     end
   end
