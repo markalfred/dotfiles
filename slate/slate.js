@@ -16,8 +16,7 @@ slate.configAll({
   'windowHintsSpreadSearchHeight': 100
 });
 
-var LEADER = 'm,ctrl',
-    SKIP = ['Plex'];
+var LEADER = 'm,ctrl';
 
 function chord(varargs) {
   return Array.prototype.slice.call(arguments).reduce(function(ks, k) {
@@ -107,20 +106,6 @@ slate.bind(chord('toggle', LEADER, 'w'), slate.operation('throw', {
 slate.bind(chord(LEADER, 's'), slate.operation('hint', {
   'characters': 'FJDKSLA'
 }));
-
-slate.bind(chord(LEADER, 'o'), function hideMost(w) {
-  var skip = [slate.app().name()].concat(SKIP);
-
-  slate.eachApp(function(a) {
-    var name = a.name();
-
-    if (!~skip.indexOf(name)) {
-      w.doOperation(slate.operation('hide', {
-        'app': name
-      }));
-    }
-  });
-});
 
 slate.bind(chord(LEADER, 'm'), function focusLast(w) {
   var found = false;
