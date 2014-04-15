@@ -16,7 +16,7 @@ slate.configAll({
   'windowHintsSpreadSearchHeight': 100
 });
 
-var LEADER = 'm,ctrl';
+var LEADER = 'j,ctrl';
 
 function chord(varargs) {
   return Array.prototype.slice.call(arguments).reduce(function(ks, k) {
@@ -64,7 +64,7 @@ slate.bind(chord(LEADER, 'f'),
            slate.operation('move',
                            _.extend({}, topLeft, fullWidth, fullHeight)));
 
-slate.bind(chord(LEADER, 'h'),
+slate.bind(chord(LEADER, 'j'),
            slate.operation('move',
                            _.extend({}, topLeft, halfWidth, fullHeight)));
 
@@ -72,27 +72,27 @@ slate.bind(chord(LEADER, 'l'),
            slate.operation('move',
                            _.extend({}, topRight, halfWidth, fullHeight)));
 
-slate.bind(chord(LEADER, 'k'),
+slate.bind(chord(LEADER, 'i'),
            slate.operation('move',
                            _.extend({}, topLeft, fullWidth, halfHeight)));
 
-slate.bind(chord(LEADER, 'j'),
+slate.bind(chord(LEADER, 'k'),
            slate.operation('move',
                            _.extend({}, bottomLeft, fullWidth, halfHeight)));
 
-slate.bind(chord(LEADER + ',shift', 'h'),
+slate.bind(chord(LEADER, 'u'),
            slate.operation('move',
                            _.extend({}, topLeft, halfWidth, halfHeight)));
 
-slate.bind(chord(LEADER + ',shift', 'l'),
+slate.bind(chord(LEADER, 'o'),
            slate.operation('move',
                            _.extend({}, topRight, halfWidth, halfHeight)));
 
-slate.bind(chord(LEADER + ',shift', 'k'),
+slate.bind(chord(LEADER, ';'),
            slate.operation('move',
                            _.extend({}, bottomRight, halfWidth, halfHeight)));
 
-slate.bind(chord(LEADER + ',shift', 'j'),
+slate.bind(chord(LEADER, 'h'),
            slate.operation('move',
                            _.extend({}, bottomLeft, halfWidth, halfHeight)));
 
