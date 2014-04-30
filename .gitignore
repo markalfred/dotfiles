@@ -13,3 +13,4 @@ flexget/flexget.log
 flexget/received/
 
 roots/
+fish/generated_completions/
