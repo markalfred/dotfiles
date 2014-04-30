@@ -1,4 +1,6 @@
 function fish_user_key_bindings
-  # Bind ctrl+d to Exit, because it'll never be used as Delete.
-  bind \cd 'exit'
+  bind \cd 'exit' # Ctrl + D: always exit
+
+  bind “ 'prevd; commandline -f repaint' # Alt + [: back
+  bind ‘ 'nextd; commandline -f repaint' # Alt + ]: forward
 end
