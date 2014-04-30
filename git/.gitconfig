@@ -20,12 +20,16 @@
 	p = pull
 	r = rebase
 	s = status --short
+	d = diff
+	a = add
+	b = branch
 
 	c- = checkout -
 	cb = checkout -b
 	cB = checkout -B
 	cm = checkout master
 	rc = rebase --continue
+	al = add .
 	rem = rebase master
 	rpo = remote prune origin
 	up = !git fetch && git checkout master && git pull && git checkout -
