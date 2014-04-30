@@ -7,7 +7,7 @@
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AnimateDimming</key>
-	<true/>
+	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -876,11 +876,11 @@
 	<key>Default Bookmark Guid</key>
 	<string>862BB286-0B05-4507-B7F2-A4461A95A2B9</string>
 	<key>DimBackgroundWindows</key>
-	<true/>
+	<false/>
 	<key>DimInactiveSplitPanes</key>
 	<true/>
 	<key>DimOnlyText</key>
-	<true/>
+	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>DisableToolbar</key>
@@ -1077,10 +1077,12 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>586 519 214 309 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>985 447 924 485 0 0 2560 1418 </string>
+	<string>977 529 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>16 504 710 898 0 0 2560 1418 </string>
+	<string>16 28 2530 1374 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-1187 86 934 706 -1440 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_63C55AF1-0149-4E4E-B4C0-4B887FA6F274</key>
@@ -1279,7 +1281,7 @@
 			<key>Automatically Log</key>
 			<false/>
 			<key>BM Growl</key>
-			<true/>
+			<false/>
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -2764,7 +2766,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-04-09T20:34:49Z</date>
+	<date>2014-04-16T14:30:15Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -2776,7 +2778,7 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.52489233016967773</real>
+	<real>0.31528195738792419</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
