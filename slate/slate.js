@@ -25,39 +25,39 @@ function chord(varargs) {
 }
 
 var topLeft = {
-  'x': 'screenOriginX + 22',
-  'y': 'screenOriginY + 22'
+  'x': 'screenOriginX + 19',
+  'y': 'screenOriginY + 21.666'
 };
 
 var topRight = {
-  'x': 'screenOriginX + screenSizeX / 2 + 11',
+  'x': 'screenOriginX + screenSizeX / 2 + (19/2)',
   'y': 'screenOriginY + 22'
 };
 
 var bottomLeft = {
-  'x': 'screenOriginX + 22',
-  'y': 'screenOriginY + screenSizeY / 2 + 11'
+  'x': 'screenOriginX + 19',
+  'y': 'screenOriginY + screenSizeY / 2 + (21.666/2)'
 };
 
 var bottomRight = {
-  'x': 'screenOriginX + screenSizeX / 2 + 11',
-  'y': 'screenOriginY + screenSizeY / 2 + 11'
+  'x': 'screenOriginX + screenSizeX / 2 + (19/2)',
+  'y': 'screenOriginY + screenSizeY / 2 + (21.666/2)'
 };
 
 var fullWidth = {
-  'width': 'screenSizeX - 40'
+  'width': 'screenSizeX - (19*2)'
 };
 
 var fullHeight = {
-  'height': 'screenSizeY - 40'
+  'height': 'screenSizeY - (21.666*2)'
 };
 
 var halfWidth = {
-  'width': 'screenSizeX / 2 - 30'
+  'width': 'screenSizeX / 2 - (19*3/2)'
 };
 
 var halfHeight = {
-  'height': 'screenSizeY / 2 - 30'
+  'height': 'screenSizeY / 2 - (21.666*3/2)'
 };
 
 slate.bind(chord(LEADER, 'f'),
