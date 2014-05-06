@@ -1,3 +1,0 @@
-bind  main  C   !git checkout %(commit)
-bind  main  R   !git rebase -i %(commit)^
-bind  main  P   !git cherry-pick -e %(commit)

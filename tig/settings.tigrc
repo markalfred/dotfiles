@@ -1,4 +1,0 @@
-set show-author = email-user
-set author-width = 7
-set show-date = relative
-set show-refs = true
