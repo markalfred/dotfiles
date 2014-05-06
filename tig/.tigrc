@@ -143,12 +143,31 @@ set mouse-scroll		= 2		# Number of lines to scroll via the mouse
 #   %(diffargs)		The diff options from `diff-options` or `TIG_DIFF_OPTS`
 #   %(prompt)		Prompt for the argument value.
 
-bind main	C	?git cherry-pick %(commit)
-bind status	C	!git commit
-bind stash	P	?git stash pop %(stash)
-bind stash	!	?git stash drop %(stash)
-bind refs	C	?git checkout %(branch)
+bind status	c	@git commit -v
+bind stage	c	@git commit -v
+bind status	C	@git commit -v --amend
+bind stage	C	@git commit -v --amend
+
+bind stash	P	?@git stash pop %(stash)
+bind stash	!	?@git stash drop %(stash)
 bind refs	!	?git branch -D %(branch)
+
+bind refs	c	:!git checkout %(branch)
+bind main	c	:!?git checkout %(commit)
+bind diff	c	:!?git checkout %(commit)
+
+bind main	P	:!git cherry-pick -e %(commit)
+bind diff	P	:!git cherry-pick -e %(commit)
+
+bind main	R	:!git rebase -i %(commit)^ # Rebase, starting at selected commit
+bind diff	R	:!git rebase -i %(commit)^
+bind refs	R	:!git rebase -i %(branch)
+
+bind refs	n	@git checkout -b "mb/%(prompt Enter branch name: mb/)"
+
+bind generic	U	!sh -c "git checkout master && git pull && git checkout - && git rebase master"
+
+bind main	<C-P>	?!git push %(remote) "%(commit):%(prompt Enter branch name: )"
 
 # Normal commands
 # ---------------
@@ -159,13 +178,11 @@ bind generic	d	view-diff
 bind generic	l	view-log
 bind generic	t	view-tree
 bind generic	f	view-blob
-bind generic	b	view-blame
 bind generic	r	view-refs
 bind generic	p	view-pager
 bind generic	h	view-help
 bind generic	s	view-status
-bind generic	S	view-status		# Compat binding to avoid going crazy!
-bind generic	c	view-stage
+bind generic	c	none
 bind generic	y	view-stash
 bind generic	g	view-grep
 
@@ -211,6 +228,7 @@ bind generic	<Space>	move-page-down
 bind generic	<PgUp>	move-page-up
 bind generic	<C-U>	move-page-up
 bind generic	-	move-page-up
+bind generic	b	move-page-up
 bind generic	<Home>	move-first-line
 bind generic	<End>	move-last-line
 
@@ -253,6 +271,8 @@ bind generic	$	:toggle commit-title-overflow
 						# Toggle display of file in untracked directories
 # bind generic	???	:toggle vertical-split	# Toggle vertical split
 bind generic	%	:toggle file-filter
+
+bind generic	S	:source ~/.tigrc	# Reload .tigrc file
 
 # Misc
 bind generic	e	edit			# Open in editor
