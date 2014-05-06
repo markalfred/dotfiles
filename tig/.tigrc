@@ -50,13 +50,13 @@
 # the column. Use zero (the default value) to auto-size the column based
 # on the content.
 
-set blame-view	= date:default author:full file-name:auto id:yes,color line-number:no,interval=5 text
+set blame-view	= date:relative author:email-user,width=7 file-name:auto id:yes,color line-number:no,interval=5 text
 set grep-view	= file-name:no line-number:yes,interval=1 text
-set main-view	= line-number:no,interval=5 id:no date:default author:full commit-title:yes,graph,refs,overflow=no
-set refs-view	= date:default author:full ref commit-title
-set stash-view	= line-number:no,interval=5 id:no date:default author:full commit-title
+set main-view	= line-number:no,interval=5 id:no date:relative author:email-user,width=7 commit-title:yes,graph,refs,overflow=no
+set refs-view	= date:relative author:email-user,width=7 ref commit-title
+set stash-view	= line-number:no,interval=5 id:no date:relative author:email-user,width=7 commit-title
 set status-view	= line-number:no,interval=5 status:short file-name
-set tree-view	= line-number:no,interval=5 mode author:full file-size date:default id:no file-name
+set tree-view	= line-number:no,interval=5 mode author:email-user,width=7 file-size date:relative id:no file-name
 
 # Pager based views
 set pager-view	= line-number:no,interval=5 text
@@ -83,7 +83,7 @@ set line-graphics		= default	# Enum: ascii, default, utf-8
 # Similarly, `remote` is used if no `tracked-remote` format exists.
 # Prefix with `hide:` to not show that reference type, e.g. `hide:remote`.
 # Expects a space separated list of format strings.
-set reference-format		= [branch] <tag> {remote} ~replace~
+set reference-format		= (head) branch <tag> remote (tracked-remote) ~replace~
 
 # Settings controlling how content is read from Git
 set commit-order		= default	# Enum: default, topo, date, reverse (main)
@@ -319,7 +319,7 @@ color "    Acked-by"		yellow	default
 color "    Tested-by"		yellow	default
 color "    Reviewed-by"		yellow	default
 color default			default	default	normal
-color cursor			white	green	bold
+color cursor			white	238	bold
 color status			green	default
 color delimiter			magenta	default
 color date			blue	default
