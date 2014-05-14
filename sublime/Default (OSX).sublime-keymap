@@ -8,6 +8,8 @@
 
   { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" },
 
+  { "keys": ["ctrl+o"], "command": "toggle_overwrite" },
+
   // Swap selections.
   { "keys": ["ctrl+r"], "command": "permute_selection", "args": {"operation": "reverse"} },
 
