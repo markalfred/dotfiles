@@ -4,12 +4,12 @@
 ~/.config directory
 
 Contains configuration for:
-* Git
-* Tig (but not really)
 * Fish
-* Sublime
 * Flexget
+* Git
 * Slate
+* Sublime
+* Tig
 
 Use symlinks to keep all config in the same directory.
 
