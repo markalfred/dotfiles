@@ -1,6 +1,7 @@
 [
   { "keys": ["super+shift+w"], "command": "close_all" },
-  { "keys": ["super+q"], "command": "close_window" },
+  { "keys": ["super+q"], "command": "do_nothing" },
+  { "keys": ["ctrl+super+q"], "command": "close_window" },
 
   { "keys": ["ctrl+super+y"], "command": "cucumber_step_finder" },
 
