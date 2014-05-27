@@ -50,3 +50,7 @@ end
 function _git_ahead_by
   echo (command git rev-list --left-right "@{u}..." | grep -c '>')
 end
+
+function _git_upstream_branch
+  echo (command git rev-parse --abbrev-ref --symbolic-full-name "$argv@{u}")
+end
