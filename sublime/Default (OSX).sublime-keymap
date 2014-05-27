@@ -38,6 +38,22 @@
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
 
+  // Status - Cycle through sections.
+  { "keys": ["J"], "command": "git_status_move", "args": {"goto": "section:next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+  { "keys": ["K"], "command": "git_status_move", "args": {"goto": "section:prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+
+  // Status - Cycle through files.
+  { "keys": ["j"], "command": "git_status_move", "args": {"goto": "item:next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+  { "keys": ["k"], "command": "git_status_move", "args": {"goto": "item:prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+
+  // Diff - Cycle through files.
+  { "keys": ["J"], "command": "git_diff_move", "args": {"item": "file", "which": "next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+  { "keys": ["K"], "command": "git_diff_move", "args": {"item": "file", "which": "prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+
+  // Diff - Cycle through hunks.
+  { "keys": ["j"], "command": "git_diff_move", "args": {"item": "hunk", "which": "next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+  { "keys": ["k"], "command": "git_diff_move", "args": {"item": "hunk", "which": "prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+
   // Home + End keys.
   { "keys": ["home"], "command": "move_to", "args": {"to": "bol", "extend": false} },
   { "keys": ["end"], "command": "move_to", "args": {"to": "eol", "extend": false} },
