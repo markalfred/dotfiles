@@ -1,4 +1,5 @@
 {
   "binDir": "/usr/local/bin",
+  "rulers": [132],
   "sourceMaps":true
 }
