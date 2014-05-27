@@ -8,10 +8,17 @@
 	excludesfile = ~/.config/git/.gitignore_global
 [push]
 	default = current
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
 [rerere]
 	enabled = 1
 [difftool "sourcetree"]
 [mergetool "sourcetree"]
+
 
 
 [alias]
