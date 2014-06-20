@@ -32,6 +32,7 @@
 	b = branch
 
 	c- = checkout -
+	r- = rebase - -i
 	cb = checkout -b
 	cB = checkout -B
 	cm = checkout master
