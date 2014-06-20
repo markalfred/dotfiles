@@ -83,7 +83,7 @@ set line-graphics		= default	# Enum: ascii, default, utf-8
 # Similarly, `remote` is used if no `tracked-remote` format exists.
 # Prefix with `hide:` to not show that reference type, e.g. `hide:remote`.
 # Expects a space separated list of format strings.
-set reference-format		= (head) branch <tag> remote (tracked-remote) ~replace~
+set reference-format		= ~(head)~ branch <tag> remote (tracked-remote) ~replace~
 
 # Settings controlling how content is read from Git
 set commit-order		= default	# Enum: default, topo, date, reverse (main)
