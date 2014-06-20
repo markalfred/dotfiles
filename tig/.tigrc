@@ -276,7 +276,8 @@ bind generic	S	:source ~/.tigrc	# Reload .tigrc file
 
 # Misc
 bind generic	e	edit			# Open in editor
-bind generic	:	prompt			# Open the prompt
+bind generic	;	prompt
+bind generic	:	!git "%(prompt git )"	# Open the prompt (with git prepended)
 bind generic	<C-L>	screen-redraw		# Redraw the screen
 bind generic	z	stop-loading		# Stop all loading views
 bind generic	v	show-version		# Show Tig version
