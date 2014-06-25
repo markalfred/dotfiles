@@ -153,7 +153,9 @@ bind stash	!	?@git stash drop %(stash)
 bind refs	!	?git branch -D %(branch)
 
 bind refs	c	:!git checkout %(branch)
-bind main	c	!?git checkout %(commit)
+bind main	c	!?git checkout %(branch)
+
+bind main	C	!?git checkout %(commit)
 bind diff	c	!?git checkout %(commit)
 
 bind main	P	:!git cherry-pick -e %(commit)
