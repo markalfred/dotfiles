@@ -15,7 +15,10 @@ function git
 
   else if [ push = $argv[1] ]
     if [ (_git_branch_name) = 'master' ]
-      echo "Dude, you're on master."
+      set -l confirm (input 'Are you sure you want to push master?')
+      if [ $confirm = y ]
+        command git $argv
+      end
     else
       command git $argv
     end

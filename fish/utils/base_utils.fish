@@ -19,3 +19,18 @@ function _current_directory
     print (pwd | sed -e "s|^$HOME|~|")
   end
 end
+
+function input
+  function _input_prompt
+    set_color green
+    print $msg
+    set_color normal
+    print ' ⟩ '
+    set_color blue
+  end
+
+  set -g msg $argv
+  read -p _input_prompt resp
+  set -e msg
+  echo $resp
+end
