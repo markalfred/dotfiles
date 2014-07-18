@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Git: Reset Last Commit",
+        "command": "shell_command",
+        "args": {
+            "command": "git reset HEAD^",
+            "panel": true
+        }
+    }
+]
