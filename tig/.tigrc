@@ -166,6 +166,7 @@ bind diff	R	:!git rebase -i %(commit)^
 bind refs	R	:!git rebase -i %(branch)
 
 bind refs	n	@git checkout -b "mb/%(prompt Enter branch name: mb/)"
+bind refs r @git branch -m "mb/%(prompt Enter branch name: mb/)"
 
 bind generic	U	!sh -c "git checkout master && git pull && git checkout - && git rebase master"
 
