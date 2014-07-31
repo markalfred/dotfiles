@@ -50,10 +50,20 @@
   // Diff - Cycle through files.
   { "keys": ["J"], "command": "git_diff_move", "args": {"item": "file", "which": "next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
   { "keys": ["K"], "command": "git_diff_move", "args": {"item": "file", "which": "prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+  { "keys": ["J"], "command": "git_diff_move", "args": {"item": "file", "which": "next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show"}]},
+  { "keys": ["K"], "command": "git_diff_move", "args": {"item": "file", "which": "prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show"}]},
 
   // Diff - Cycle through hunks.
   { "keys": ["j"], "command": "git_diff_move", "args": {"item": "hunk", "which": "next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
   { "keys": ["k"], "command": "git_diff_move", "args": {"item": "hunk", "which": "prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+  { "keys": ["j"], "command": "git_diff_move", "args": {"item": "hunk", "which": "next"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show"}]},
+  { "keys": ["k"], "command": "git_diff_move", "args": {"item": "hunk", "which": "prev"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show"}]},
+
+  // Scroll pages.
+  { "keys": [" "], "command": "move", "args": {"by": "pages", "forward": true}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+  { "keys": ["b"], "command": "move", "args": {"by": "pages", "forward": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff"}]},
+  { "keys": [" "], "command": "move", "args": {"by": "pages", "forward": true}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show"}]},
+  { "keys": ["b"], "command": "move", "args": {"by": "pages", "forward": false}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show"}]},
 
   // Home + End keys.
   { "keys": ["home"], "command": "move_to", "args": {"to": "bol", "extend": false} },
