@@ -1,3 +1,3 @@
 function fish_title
-  print (_current_directory)
+  echo (_current_directory) (_current_host)
 end
