@@ -20,9 +20,10 @@ function fish_right_prompt
     end
   end
 
-  # Then, show Current Directory / Project.
+  # Next, show Current Directory / Project.
   print $dark_gray(_current_directory)
-  # Finally, show git branch and dirty state.
+
+  # Then, show git branch and dirty state.
   if [ (_git_branch_name) ]
     print ':'
     # Show git branch name
@@ -45,6 +46,7 @@ function fish_right_prompt
     end
   end
 
+  # Finally, show ssh host if connected.
   if test -n "$SSH_CONNECTION"
     echo $green (_current_host)
   end
