@@ -20,6 +20,12 @@ function _current_directory
   end
 end
 
+function _current_host
+  if test -n "$SSH_CONNECTION"
+    print '(' (hostname | cut -d . -f 1) ')'
+  end
+end
+
 function input
   function _input_prompt
     set_color green

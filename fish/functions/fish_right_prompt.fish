@@ -46,7 +46,7 @@ function fish_right_prompt
   end
 
   if test -n "$SSH_CONNECTION"
-    print $green ' (' (hostname) ')'
+    echo $green (_current_host)
   end
 
   print $normal
