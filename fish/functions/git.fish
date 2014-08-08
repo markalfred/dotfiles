@@ -23,6 +23,16 @@ function git
       command git $argv
     end
 
+  # Impliment git pull --autostash myself
+  else if [ pull = $argv[1] ]
+    if [ (_git_is_dirty) ]
+      command git stash
+      command git pull
+      command git stash pop
+    else
+      command git pull
+    end
+
   else
     command git $argv
   end
