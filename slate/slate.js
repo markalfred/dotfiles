@@ -44,6 +44,13 @@ var bottomRight = {
   'y': 'screenOriginY + screenSizeY / 2 + (21.666/2)'
 };
 
+var center = function(size) {
+  return {
+    'x': '(screenSizeX - ' + size.width + ') / 2',
+    'y': '(screenSizeY - ' + size.height + ') / 2'
+  };
+};
+
 var fullWidth = {
   'width': 'screenSizeX - (19*2)'
 };
@@ -58,6 +65,13 @@ var halfWidth = {
 
 var halfHeight = {
   'height': 'screenSizeY / 2 - (21.666*3/2)'
+};
+
+var sameSize = function(size) {
+  return {
+    'width': size.width,
+    'height': size.height
+  };
 };
 
 slate.bind(chord(LEADER, 'f'),
@@ -127,4 +141,8 @@ slate.bind("space:ctrl", function toggleTerm(win) {
   } else {
     win.doOperation(slate.operation("focus", {"app" : 'iTerm'}));
   }
+});
+
+slate.bind(chord(LEADER, 'c'), function centerWindow(win) {
+  win.doOperation(slate.operation('move', _.extend({}, center(win.size()), sameSize(win.size()))));
 });
