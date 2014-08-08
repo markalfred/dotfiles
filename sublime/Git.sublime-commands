@@ -14,5 +14,13 @@
             "command": "git checkout master",
             "panel": true
         }
+    },
+    {
+        "caption": "Git: Open Pull Request",
+        "command": "shell_command",
+        "args": {
+            "command": "pullr -n --plaintext",
+            "panel": true
+        }
     }
 ]
