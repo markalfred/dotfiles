@@ -37,6 +37,7 @@
 
   { "keys": ["q", "q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
+  { "keys": ["d"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
 
