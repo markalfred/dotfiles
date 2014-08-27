@@ -4,8 +4,16 @@ tasks:
   download-tv-shows:
     priority: 1
     transmission: yes
-    # Import my TV series and series settings.
-    include: tv-series.yml
+    configure_series:
+      settings:
+        set:
+          path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
+      from:
+        trakt_list:
+          username: '{{ secrets.trakt.username }}'
+          password: '{{ secrets.trakt.password }}'
+          api_key: '{{ secrets.trakt.api_key }}'
+          series: watched
     inputs:
       - rss: { url: 'http://showrss.info/feeds/all.rss', silent: yes }          # ShowRSS
       - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
