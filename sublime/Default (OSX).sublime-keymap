@@ -76,4 +76,85 @@
   { "keys": ["super+end"], "command": "move_to", "args": {"to": "eof", "extend": false} },
   { "keys": ["super+shift+home"], "command": "move_to", "args": {"to": "bof", "extend": true} },
   { "keys": ["super+shift+end"], "command": "move_to", "args": {"to": "eof", "extend": true} },
+
+  // Override pairing so that tab puts cursor outside of the pair
+  // Auto-pair quotes
+  { "keys": ["\""], "command": "insert_snippet", "args": {"contents": "\"$1\""}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
+      { "key": "preceding_text", "operator": "not_regex_contains", "operand": "[\"a-zA-Z0-9_]$", "match_all": true },
+      { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.double", "match_all": true }
+    ]
+  },
+  { "keys": ["\""], "command": "insert_snippet", "args": {"contents": "\"${1:$SELECTION}\""}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+
+  // Auto-pair single quotes
+  { "keys": ["'"], "command": "insert_snippet", "args": {"contents": "'$1'"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
+      { "key": "preceding_text", "operator": "not_regex_contains", "operand": "['a-zA-Z0-9_]$", "match_all": true },
+      { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single", "match_all": true }
+    ]
+  },
+  { "keys": ["'"], "command": "insert_snippet", "args": {"contents": "'${1:$SELECTION}'"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+
+  // Auto-pair brackets
+  { "keys": ["("], "command": "insert_snippet", "args": {"contents": "($1)"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
+    ]
+  },
+  { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${1:$SELECTION})"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+
+
+  // Auto-pair square brackets
+  { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[$1]"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
+    ]
+  },
+  { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${1:$SELECTION}]"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+
+  // Auto-pair curly brackets
+  { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{$1}"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|$)", "match_all": true }
+    ]
+  },
+  { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${1:$SELECTION}}"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  }
 ]
