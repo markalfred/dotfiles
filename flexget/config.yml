@@ -1,5 +1,6 @@
-templates:
-  tv:
+tasks:
+  download-tv-shows:
+    priority: 1
     transmission: yes
     # Import my TV series and series settings.
     include: tv-series.yml
@@ -8,19 +9,6 @@ templates:
       - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
       - rss: { url: 'http://torrentz.eu/feed_verified?q=tv', silent: yes }      # Torrentz (Verified only, TV)
       - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }            # BT-Chat (EZTV)
-
-
-  movie:
-    transmission:
-      path: /Users/mark/Downloads/Movies
-    quality: dvdrip+ <1080p # No screeners, no cams.
-    torrent_alive: 10 # Ignore torrents with less than 10 seeds.
-
-
-tasks:
-  download-tv-shows:
-    priority: 1
-    template: tv
 
 
   build-movie-queue:
@@ -35,7 +23,10 @@ tasks:
     priority: 3
     interval: 2 hours
     movie_queue: yes
-    template: movie
+    transmission:
+      path: /Users/mark/Movies
+    quality: dvdrip+ <1080p # No screeners, no cams.
+    torrent_alive: 10 # Ignore torrents with less than 10 seeds.
     # Search for all movie-queue entires in torrentz.
     discover:
       what:
