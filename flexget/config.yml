@@ -1,3 +1,5 @@
+secrets: private.yml
+
 tasks:
   download-tv-shows:
     priority: 1
@@ -15,8 +17,9 @@ tasks:
     priority: 2
     accept_all: yes
     queue_movies: yes
-    # Import my IMDB Watchlist.
-    include: private/imdb-settings.yml
+    imdb_list:
+      user_id: '{{ secrets.imdb.user_id }}'
+      list: watchlist
 
 
   download-movie-queue:
