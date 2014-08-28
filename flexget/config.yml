@@ -31,9 +31,11 @@ tasks:
     priority: 2
     accept_all: yes
     queue_movies: yes
-    imdb_list:
-      user_id: '{{ secrets.imdb.user_id }}'
-      list: watchlist
+    trakt_list:
+      username: '{{ secrets.trakt.username }}'
+      password: '{{ secrets.trakt.password }}'
+      api_key: '{{ secrets.trakt.api_key }}'
+      movies: watchlist
 
 
   download-movie-queue:
