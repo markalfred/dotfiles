@@ -8,6 +8,12 @@ tasks:
       settings:
         set:
           path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
+        upgrade: yes
+        qualities:
+          - webrip
+          - hdtv
+          - hdtv 720p
+          - dvdrip 720p
       from:
         trakt_list:
           username: '{{ secrets.trakt.username }}'
