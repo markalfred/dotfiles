@@ -8,9 +8,9 @@ Package Control.system-ca-bundle
 configstore/
 
 flexget/private.yml
-flexget/db-config.sqlite
-flexget/flexget.log
 flexget/received/
+flexget/*.sqlite
+flexget/*.log
 
 roots/
 fish/generated_completions/
