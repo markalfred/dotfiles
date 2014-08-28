@@ -23,7 +23,7 @@ tasks:
     inputs:
       - rss: { url: 'http://showrss.info/feeds/all.rss', silent: yes }          # ShowRSS
       - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
-      - rss: { url: 'http://torrentz.eu/feed_verified?q=tv', silent: yes }      # Torrentz (Verified only, TV)
+      - rss: { url: 'http://torrentz.eu/feed?q=tv', silent: yes }               # Torrentz (Good only, TV)
       - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }            # BT-Chat (EZTV)
 
 
