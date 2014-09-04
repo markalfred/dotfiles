@@ -11,6 +11,8 @@
 
   { "keys": ["ctrl+o"], "command": "toggle_overwrite" },
 
+  { "keys": ["super+."], "command": "open_file", "args": {"contents": "[\n $0\n]\n", "file": "${packages}/User/Default ($platform).sublime-keymap"} },
+
   // Swap selections.
   { "keys": ["ctrl+r"], "command": "permute_selection", "args": {"operation": "reverse"} },
 
