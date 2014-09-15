@@ -25,7 +25,6 @@
   { "keys": ["alt+shift+g"], "command": "replace_next" },
 
   // SublimeGit.
-  { "keys": ["super+ctrl+s"], "command": "git_status"},
   { "keys": ["ctrl+s"], "command": "git_status"},
   { "keys": [" "], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "},
     "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
