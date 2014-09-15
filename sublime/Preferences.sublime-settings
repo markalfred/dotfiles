@@ -33,6 +33,7 @@
 	"show_tab_close_buttons": true,
 	"soda_classic_tabs": true,
 	"soda_folder_icons": true,
+	"spacegray_sidebar_tree_small": true,
 	"tab_size": 2,
 	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
