@@ -16,9 +16,6 @@
 	autostash = true
 [rerere]
 	enabled = 1
-[difftool "sourcetree"]
-[mergetool "sourcetree"]
-
 
 
 [alias]
