@@ -44,11 +44,10 @@ tasks:
     movie_queue: yes
     transmission:
       path: /Users/mark/Movies
-    quality: dvdrip+ <1080p # No screeners, no cams.
-    torrent_alive: 10 # Ignore torrents with less than 10 seeds.
-    # Search for all movie-queue entires in torrentz.
+    quality: dvdrip+ <1080p
+    torrent_alive: 500
     discover:
       what:
         - emit_movie_queue: yes
       from:
-        - torrentz: verified
+        - piratebay: yes
