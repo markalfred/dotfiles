@@ -972,7 +972,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>643 361 1270 741 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-1187 86 934 706 -1440 0 1440 878 </string>
+	<string>813 146 1417 877 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_63C55AF1-0149-4E4E-B4C0-4B887FA6F274</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_862BB286-0B05-4507-B7F2-A4461A95A2B9</key>
@@ -1226,7 +1226,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>100</integer>
+			<integer>200</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -2062,7 +2062,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>100</integer>
+			<integer>200</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -2860,7 +2860,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>100</integer>
+			<integer>200</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
