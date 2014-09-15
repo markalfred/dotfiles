@@ -42,6 +42,8 @@
 	rpo = remote prune origin
 	up = !git fetch && git checkout master && git pull && git checkout -
 
+	undo = reset HEAD^
+
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
