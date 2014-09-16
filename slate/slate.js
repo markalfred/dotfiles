@@ -110,30 +110,11 @@ slate.bind(chord(LEADER, 'h'),
            slate.operation('move',
                            _.extend({}, bottomLeft, halfWidth, halfHeight)));
 
-slate.bind(chord(LEADER, 'u'), slate.operation('undo'));
 slate.bind(chord(LEADER, 'r'), slate.operation('relaunch'));
 
 slate.bind(chord('toggle', LEADER, 'w'), slate.operation('throw', {
   'screen': 'next'
 }));
-
-slate.bind(chord(LEADER, 's'), slate.operation('hint', {
-  'characters': 'FJDKSLA'
-}));
-
-slate.bind(chord(LEADER, 'm'), function focusLast(w) {
-  var found = false;
-
-  slate.eachApp(function(a) {
-    if (found) { return; }
-
-    var aw = a.mainWindow();
-
-    if (aw && aw.pid() !== w.pid()) {
-      found = aw.focus();
-    }
-  });
-});
 
 slate.bind("space:ctrl", function toggleTerm(win) {
   if (win.app().name() === 'iTerm2') {
