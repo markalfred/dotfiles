@@ -15,11 +15,17 @@ tasks:
           - hdtv 720p
           - dvdrip 720p
       from:
-        trakt_list:
-          username: '{{ secrets.trakt.username }}'
-          password: '{{ secrets.trakt.password }}'
-          api_key: '{{ secrets.trakt.api_key }}'
-          series: watched
+        inputs:
+          - trakt_list:
+              username: '{{ secrets.trakt.username }}'
+              password: '{{ secrets.trakt.password }}'
+              api_key: '{{ secrets.trakt.api_key }}'
+              series: watched
+          - trakt_list:
+              username: '{{ secrets.trakt.username }}'
+              password: '{{ secrets.trakt.password }}'
+              api_key: '{{ secrets.trakt.api_key }}'
+              series: watchlist
     inputs:
       - rss: { url: 'http://showrss.info/feeds/all.rss', silent: yes }          # ShowRSS
       - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
