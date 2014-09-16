@@ -1,44 +1,59 @@
-templates:
-  tv:
-    transmission: yes
-    # Import my TV series and series settings.
-    include: tv-series.yml
-    inputs:
-      - rss: { url: 'http://showrss.info/feeds/all.rss', silent: yes }          # ShowRSS
-      - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
-      - rss: { url: 'http://torrentz.eu/feed_verified?q=tv', silent: yes }      # Torrentz (Verified only, TV)
-      - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }            # BT-Chat (EZTV)
-
-
-  movie:
-    transmission:
-      path: /Users/mark/Downloads/Movies
-    quality: dvdrip+ <1080p # No screeners, no cams.
-    torrent_alive: 10 # Ignore torrents with less than 10 seeds.
-
+secrets: private.yml
 
 tasks:
   download-tv-shows:
     priority: 1
-    template: tv
+    transmission: yes
+    configure_series:
+      settings:
+        set:
+          path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
+        upgrade: yes
+        qualities:
+          - webrip
+          - hdtv
+          - hdtv 720p
+          - dvdrip 720p
+      from:
+        inputs:
+          - trakt_list:
+              username: '{{ secrets.trakt.username }}'
+              password: '{{ secrets.trakt.password }}'
+              api_key: '{{ secrets.trakt.api_key }}'
+              series: watched
+          - trakt_list:
+              username: '{{ secrets.trakt.username }}'
+              password: '{{ secrets.trakt.password }}'
+              api_key: '{{ secrets.trakt.api_key }}'
+              series: watchlist
+    inputs:
+      - rss: { url: 'http://showrss.info/feeds/all.rss', silent: yes }          # ShowRSS
+      - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
+      - rss: { url: 'http://torrentz.eu/feed?q=tv', silent: yes }               # Torrentz (Good only, TV)
+      - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }            # BT-Chat (EZTV)
 
 
   build-movie-queue:
     priority: 2
     accept_all: yes
     queue_movies: yes
-    # Import my IMDB Watchlist.
-    include: private/imdb-settings.yml
+    trakt_list:
+      username: '{{ secrets.trakt.username }}'
+      password: '{{ secrets.trakt.password }}'
+      api_key: '{{ secrets.trakt.api_key }}'
+      movies: watchlist
 
 
   download-movie-queue:
     priority: 3
     interval: 2 hours
     movie_queue: yes
-    template: movie
-    # Search for all movie-queue entires in torrentz.
+    transmission:
+      path: /Users/mark/Movies
+    quality: dvdrip+ <1080p
+    torrent_alive: 500
     discover:
       what:
         - emit_movie_queue: yes
       from:
-        - torrentz: verified
+        - piratebay: yes

@@ -7,7 +7,7 @@
 shopt -s nocasematch
 
 # TV Shows folder in Media Library directory:
-shows="$HOME/Downloads/TV Shows"
+shows="$HOME/TV Shows"
 
 # Completed Downloads folder:
 downloads="$HOME/Torrents - Complete"

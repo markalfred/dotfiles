@@ -7,10 +7,10 @@ Package Control.system-ca-bundle
 
 configstore/
 
-flexget/private/imdb-settings.yml
-flexget/db-config.sqlite
-flexget/flexget.log
+flexget/private.yml
 flexget/received/
+flexget/*.sqlite
+flexget/*.log
 
 roots/
 fish/generated_completions/
