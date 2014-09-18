@@ -1226,7 +1226,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>200</integer>
+			<integer>193</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -2062,7 +2062,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>200</integer>
+			<integer>193</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -2860,7 +2860,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>200</integer>
+			<integer>193</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
