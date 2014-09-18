@@ -8,6 +8,7 @@ Contains configuration for:
 * Slate
 * Sublime
 * Tig
+* Tmux
 
 Use symlinks to keep all config in the same directory.
 
