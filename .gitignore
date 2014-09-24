@@ -10,7 +10,7 @@ configstore/
 flexget/private.yml
 flexget/received/
 flexget/*.sqlite
-flexget/*.log
+flexget/*.log*
 
 roots/
 fish/generated_completions/
