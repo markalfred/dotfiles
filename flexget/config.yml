@@ -26,11 +26,19 @@ tasks:
               password: '{{ secrets.trakt.password }}'
               api_key: '{{ secrets.trakt.api_key }}'
               series: watchlist
-    inputs:
-      - rss: { url: 'http://showrss.info/feeds/all.rss', silent: yes }          # ShowRSS
-      - rss: { url: 'http://ezrss.it/feed/', silent: yes }                      # EZRSS
-      - rss: { url: 'http://torrentz.eu/feed?q=tv', silent: yes }               # Torrentz (Good only, TV)
-      - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }            # BT-Chat (EZTV)
+    discover:
+      what:
+        - trakt_emit:
+            username: '{{ secrets.trakt.username }}'
+            password: '{{ secrets.trakt.password }}'
+            api_key: '{{ secrets.trakt.api_key }}'
+        - trakt_list:
+            username: '{{ secrets.trakt.username }}'
+            password: '{{ secrets.trakt.password }}'
+            api_key: '{{ secrets.trakt.api_key }}'
+            series: watchlist
+      from:
+        - piratebay: yes
 
 
   build-movie-queue:
