@@ -35,6 +35,10 @@ tasks:
             series: watchlist
       from:
         - piratebay: yes
+    pushbullet:
+      apikey: '{{ secrets.pushbullet.apikey }}'
+      title: 'Downloading - {{ series_name }}'
+      body: '{{ series_season }}, {{ series_episode }}'
 
 
   download-nightlies:
@@ -53,6 +57,10 @@ tasks:
       - rss: http://ezrss.it/feed/
       - rss: http://torrentz.eu/feed?q=tv
       - rss: http://rss.bt-chat.com/?group=3
+    pushbullet:
+      apikey: '{{ secrets.pushbullet.apikey }}'
+      title: 'Downloading - {{ series_name }}'
+      body: '{{ series_date }}'
 
 
   build-movie-queue:
@@ -64,6 +72,10 @@ tasks:
       password: '{{ secrets.trakt.password }}'
       api_key: '{{ secrets.trakt.api_key }}'
       movies: watchlist
+    pushbullet:
+      apikey: '{{ secrets.pushbullet.apikey }}'
+      title: 'Added to Queue - {{ movie_name }}'
+      body: ''
 
 
   download-movie-queue:
@@ -79,3 +91,7 @@ tasks:
         - emit_movie_queue: yes
       from:
         - piratebay: yes
+    pushbullet:
+      apikey: '{{ secrets.pushbullet.apikey }}'
+      title: 'Downloading - {{ movie_name }}'
+      body: ''
