@@ -2,7 +2,7 @@ secrets: private.yml
 
 tasks:
   download-tv-shows:
-    priority: 1
+    priority: 2
     transmission: yes
     configure_series:
       settings:
@@ -37,8 +37,26 @@ tasks:
         - piratebay: yes
 
 
+  download-nightlies:
+    priority: 1
+    transmission: yes
+    series:
+      - The Daily Show:
+          identified_by: date
+          path: "/Users/mark/TV Shows/The Daily Show with Jon Stewart/"
+      - The Colbert Report:
+          identified_by: date
+          path: "/Users/mark/TV Shows/The Colbert Report/"
+    inputs:
+      - rss: http://rss.thepiratebay.se/205
+      - rss: http://showrss.info/feeds/all.rss
+      - rss: http://ezrss.it/feed/
+      - rss: http://torrentz.eu/feed?q=tv
+      - rss: http://rss.bt-chat.com/?group=3
+
+
   build-movie-queue:
-    priority: 2
+    priority: 3
     accept_all: yes
     queue_movies: yes
     trakt_list:
@@ -49,7 +67,7 @@ tasks:
 
 
   download-movie-queue:
-    priority: 3
+    priority: 4
     interval: 2 hours
     movie_queue: yes
     transmission:
