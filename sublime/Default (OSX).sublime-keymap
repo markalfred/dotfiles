@@ -20,6 +20,9 @@
   { "keys": ["super+v"], "command": "paste_and_indent" },
   { "keys": ["super+shift+v"], "command": "paste" },
 
+  // Better Coffeescript's Toggle Parens command
+  {"keys": ["alt+shift+9"], "command": "toggle_parens"},
+
   // Working replace.
   { "keys": ["alt+shift+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
   { "keys": ["alt+shift+g"], "command": "replace_next" },
