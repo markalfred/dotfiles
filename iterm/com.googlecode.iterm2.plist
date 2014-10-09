@@ -1541,6 +1541,13 @@
 					<key>Text</key>
 					<string>[18;2~</string>
 				</dict>
+				<key>0xf70b-0x0</key>
+				<dict>
+					<key>Action</key>
+					<integer>37</integer>
+					<key>Text</key>
+					<string>791189C9-6E96-4921-A6CB-700CBF78B621</string>
+				</dict>
 				<key>0xf70b-0x20000</key>
 				<dict>
 					<key>Action</key>
@@ -2377,6 +2384,13 @@
 					<key>Text</key>
 					<string>[18;2~</string>
 				</dict>
+				<key>0xf70b-0x0</key>
+				<dict>
+					<key>Action</key>
+					<integer>37</integer>
+					<key>Text</key>
+					<string>862BB286-0B05-4507-B7F2-A4461A95A2B9</string>
+				</dict>
 				<key>0xf70b-0x20000</key>
 				<dict>
 					<key>Action</key>
@@ -3168,6 +3182,13 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[18;2~</string>
+				</dict>
+				<key>0xf70b-0x0</key>
+				<dict>
+					<key>Action</key>
+					<integer>37</integer>
+					<key>Text</key>
+					<string>53E1D9FC-311A-40E4-8594-E545D2AB676E</string>
 				</dict>
 				<key>0xf70b-0x20000</key>
 				<dict>
