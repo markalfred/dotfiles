@@ -190,6 +190,7 @@ bind generic	s	view-status
 bind generic	c	none
 bind generic	y	view-stash
 bind generic	g	view-grep
+bind generic	x	view-blame
 
 # View manipulation
 bind generic	<Enter>	enter			# Enter and open selected entry
