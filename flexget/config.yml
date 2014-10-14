@@ -10,6 +10,7 @@ tasks:
           path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
         upgrade: yes
         quality: webrip+ <=720p
+        identified_by: ep
         main_file_only: yes
       from:
         inputs:
@@ -25,15 +26,7 @@ tasks:
               series: watchlist
     discover:
       what:
-        - trakt_emit:
-            username: '{{ secrets.trakt.username }}'
-            password: '{{ secrets.trakt.password }}'
-            api_key: '{{ secrets.trakt.api_key }}'
-        - trakt_list:
-            username: '{{ secrets.trakt.username }}'
-            password: '{{ secrets.trakt.password }}'
-            api_key: '{{ secrets.trakt.api_key }}'
-            series: watchlist
+        - emit_series: yes
       from:
         - piratebay: yes
     pushbullet:
@@ -65,6 +58,7 @@ tasks:
       title: 'Downloading - {{ series_name }}'
       body: '{{ series_date }}'
 
+
   kimbus:
     priority: 5
     transmission: yes
@@ -74,6 +68,7 @@ tasks:
           path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
         upgrade: yes
         quality: webrip+ <=720p
+        identified_by: ep
       from:
         inputs:
           - trakt_list:
@@ -82,10 +77,7 @@ tasks:
               series: watchlist
     discover:
       what:
-        - trakt_list:
-            username: '{{ secrets.kimbus_trakt.username }}'
-            api_key: '{{ secrets.kimbus_trakt.api_key }}'
-            series: watchlist
+        - emit_series: yes
       from:
         - piratebay: yes
 
@@ -114,7 +106,7 @@ tasks:
       api_key: '{{ secrets.kimbus_trakt.api_key }}'
       movies: watchlist
 
- 
+
   download-movie-queue:
     priority: 4
     interval: 2 hours
