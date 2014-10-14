@@ -65,6 +65,30 @@ tasks:
       title: 'Downloading - {{ series_name }}'
       body: '{{ series_date }}'
 
+  kimbus:
+    priority: 5
+    transmission: yes
+    configure_series:
+      settings:
+        set:
+          path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
+        upgrade: yes
+        quality: webrip+ <=720p
+      from:
+        inputs:
+          - trakt_list:
+              username: '{{ secrets.kimbus_trakt.username }}'
+              api_key: '{{ secrets.kimbus_trakt.api_key }}'
+              series: watchlist
+    discover:
+      what:
+        - trakt_list:
+            username: '{{ secrets.kimbus_trakt.username }}'
+            api_key: '{{ secrets.kimbus_trakt.api_key }}'
+            series: watchlist
+      from:
+        - piratebay: yes
+
 
   build-movie-queue:
     priority: 3
@@ -81,6 +105,16 @@ tasks:
       body: ''
 
 
+  kimbus-build-movie-queue:
+    priority: 6
+    accept_all: yes
+    queue_movies: yes
+    trakt_list:
+      username: '{{ secrets.kimbus_trakt.username }}'
+      api_key: '{{ secrets.kimbus_trakt.api_key }}'
+      movies: watchlist
+
+ 
   download-movie-queue:
     priority: 4
     interval: 2 hours
