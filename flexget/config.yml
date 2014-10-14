@@ -32,7 +32,7 @@ tasks:
     pushbullet:
       apikey: '{{ secrets.pushbullet.apikey }}'
       title: 'Downloading - {{ series_name }}'
-      body: '{{ series_season }}, {{ series_episode }}'
+      body: 'Season {{ series_season }}, Episode {{ series_episode }}'
 
 
   download-nightlies:
