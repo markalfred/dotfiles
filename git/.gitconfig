@@ -41,6 +41,9 @@
 
 	undo = reset HEAD^
 
+	open = !subl $(git status --short | awk '$1 ~ /^[^ ]/ {print $2}')
+	conflicts = !subl $(git status --short | awk '$1 ~ /^[AUD][AUD]/ {print $2}')
+
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
