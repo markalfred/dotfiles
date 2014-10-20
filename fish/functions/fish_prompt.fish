@@ -3,7 +3,7 @@ function fish_prompt
   set -l dark_gray (set_color 465)
   set -l blue (set_color blue)
 
-  if [ $interactive_git_mode ]
+  if [ $interactive_mode ]
     print $blue
   else
     print $dark_gray
@@ -11,7 +11,7 @@ function fish_prompt
 
   print '⟩ ' $normal
 
-  if [ $interactive_git_mode ]
-    commandline -r 'git '
+  if [ $interactive_mode ]
+    commandline -r "$interactive_cmd "
   end
 end
