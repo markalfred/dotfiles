@@ -10,6 +10,7 @@ tasks:
           path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
         upgrade: yes
         quality: webrip+ <=720p
+        main_file_only: yes
       from:
         inputs:
           - trakt_list:
@@ -48,9 +49,11 @@ tasks:
       - The Daily Show:
           identified_by: date
           path: "/Users/mark/TV Shows/The Daily Show with Jon Stewart/"
+          main_file_only: yes
       - The Colbert Report:
           identified_by: date
           path: "/Users/mark/TV Shows/The Colbert Report/"
+          main_file_only: yes
     inputs:
       - rss: http://rss.thepiratebay.se/205
       - rss: http://showrss.info/feeds/all.rss
