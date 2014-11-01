@@ -2,7 +2,6 @@ secrets: private.yml
 
 tasks:
   download-tv-shows:
-    priority: 2
     transmission: yes
     configure_series:
       settings:
@@ -36,7 +35,6 @@ tasks:
 
 
   download-nightlies:
-    priority: 1
     transmission: yes
     series:
       - The Daily Show:
@@ -60,7 +58,6 @@ tasks:
 
 
   kimbus:
-    priority: 5
     transmission: yes
     configure_series:
       settings:
@@ -83,7 +80,6 @@ tasks:
 
 
   build-movie-queue:
-    priority: 3
     accept_all: yes
     queue_movies: yes
     trakt_list:
@@ -98,7 +94,6 @@ tasks:
 
 
   kimbus-build-movie-queue:
-    priority: 6
     accept_all: yes
     queue_movies: yes
     trakt_list:
@@ -108,7 +103,6 @@ tasks:
 
 
   download-movie-queue:
-    priority: 4
     interval: 2 hours
     movie_queue: yes
     transmission:
