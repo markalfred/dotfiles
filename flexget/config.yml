@@ -114,7 +114,7 @@ tasks:
     transmission:
       path: /Users/mark/Movies
     quality: dvdrip+ <1080p
-    torrent_alive: 500
+    torrent_alive: 50
     discover:
       what:
         - emit_movie_queue: yes
