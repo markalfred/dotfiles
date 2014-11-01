@@ -34,10 +34,10 @@
 
   { "keys": [","], "command": "git_custom", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
 
-  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-commit" }]},
-  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
-  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }]},
-  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }]},
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-commit" }, { "key": "setting.command_mode", "operand": true }]},
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }, { "key": "setting.command_mode", "operand": true }]},
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-show" }, { "key": "setting.command_mode", "operand": true }]},
+  { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-blame" }, { "key": "setting.command_mode", "operand": true }]},
 
   { "keys": ["q", "q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
   { "keys": ["q"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "source.git-diff" }]},
