@@ -1,7 +1,7 @@
 secrets: private.yml
 
 tasks:
-  download-tv-shows:
+  download-watched-tv-shows:
     transmission: yes
     configure_series:
       settings:
@@ -18,6 +18,29 @@ tasks:
               password: '{{ secrets.trakt.password }}'
               api_key: '{{ secrets.trakt.api_key }}'
               series: watched
+    discover:
+      what:
+        - emit_series: yes
+      from:
+        - piratebay: yes
+    pushbullet:
+      apikey: '{{ secrets.pushbullet.apikey }}'
+      title: 'Downloading - {{ series_name }}'
+      body: 'Season {{ series_season }}, Episode {{ series_episode }}'
+
+
+  download-new-tv-shows:
+    transmission: yes
+    configure_series:
+      settings:
+        set:
+          path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
+        upgrade: yes
+        quality: webrip+ <=720p
+        identified_by: ep
+        main_file_only: yes
+      from:
+        inputs:
           - trakt_list:
               username: '{{ secrets.trakt.username }}'
               password: '{{ secrets.trakt.password }}'
@@ -25,7 +48,8 @@ tasks:
               series: watchlist
     discover:
       what:
-        - emit_series: yes
+        - emit_series:
+            backfill: yes
       from:
         - piratebay: yes
     pushbullet:
@@ -74,7 +98,8 @@ tasks:
               series: watchlist
     discover:
       what:
-        - emit_series: yes
+        - emit_series:
+            backfill: yes
       from:
         - piratebay: yes
 
