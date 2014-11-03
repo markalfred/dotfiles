@@ -2,7 +2,8 @@ secrets: private.yml
 
 tasks:
   download-watched-tv-shows:
-    transmission: yes
+    transmission:
+      main_file_only: yes
     configure_series:
       settings:
         set:
@@ -10,7 +11,6 @@ tasks:
         upgrade: yes
         quality: webrip+ <=720p
         identified_by: ep
-        main_file_only: yes
       from:
         inputs:
           - trakt_list:
@@ -30,7 +30,8 @@ tasks:
 
 
   download-new-tv-shows:
-    transmission: yes
+    transmission:
+      main_file_only: yes
     configure_series:
       settings:
         set:
@@ -38,7 +39,6 @@ tasks:
         upgrade: yes
         quality: webrip+ <=720p
         identified_by: ep
-        main_file_only: yes
       from:
         inputs:
           - trakt_list:
@@ -59,16 +59,15 @@ tasks:
 
 
   download-nightlies:
-    transmission: yes
+    transmission:
+      main_file_only: yes
     series:
       - The Daily Show:
           identified_by: date
           path: "/Users/mark/TV Shows/The Daily Show with Jon Stewart/"
-          main_file_only: yes
       - The Colbert Report:
           identified_by: date
           path: "/Users/mark/TV Shows/The Colbert Report/"
-          main_file_only: yes
     inputs:
       - rss: http://rss.thepiratebay.se/205
       - rss: http://showrss.info/feeds/all.rss
@@ -82,7 +81,8 @@ tasks:
 
 
   kimbus:
-    transmission: yes
+    transmission:
+      main_file_only: yes
     configure_series:
       settings:
         set:
