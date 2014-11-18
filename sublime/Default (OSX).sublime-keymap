@@ -85,7 +85,6 @@
   // Auto-pair quotes
   { "keys": ["\""], "command": "insert_snippet", "args": {"contents": "\"$1\""}, "context":
     [
-      { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
       { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
@@ -95,7 +94,6 @@
   },
   { "keys": ["\""], "command": "insert_snippet", "args": {"contents": "\"${1:$SELECTION}\""}, "context":
     [
-      { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
     ]
@@ -114,7 +112,6 @@
   },
   { "keys": ["'"], "command": "insert_snippet", "args": {"contents": "'${1:$SELECTION}'"}, "context":
     [
-      { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
     ]
@@ -123,7 +120,6 @@
   // Auto-pair brackets
   { "keys": ["("], "command": "insert_snippet", "args": {"contents": "($1)"}, "context":
     [
-      { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
       { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
@@ -131,7 +127,6 @@
   },
   { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${1:$SELECTION})"}, "context":
     [
-      { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
     ]
@@ -141,7 +136,6 @@
   // Auto-pair square brackets
   { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[$1]"}, "context":
     [
-      { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
       { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
@@ -149,7 +143,6 @@
   },
   { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${1:$SELECTION}]"}, "context":
     [
-      { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
     ]
