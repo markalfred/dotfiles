@@ -38,8 +38,8 @@ bottomRight =
   y: 'screenOriginY + screenSizeY / 2 + (21.666/2)'
 
 center = (size) ->
-  x: "(screenSizeX - #{size.width}) / 2"
-  y: "(screenSizeY - #{size.height}) / 2"
+  x: "screenOriginX + ((screenSizeX - #{size.width}) / 2)"
+  y: "screenOriginY + ((screenSizeY - #{size.height}) / 2)"
 
 fullWidth = width: 'screenSizeX - (19*2)'
 fullHeight = height: 'screenSizeY - (21.666*2)'
