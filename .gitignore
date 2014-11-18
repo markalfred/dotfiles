@@ -1,4 +1,6 @@
 fish_history
+fish_read_history
+generated_completions
 fishd*
 
 Package Control.cache/
@@ -13,6 +15,8 @@ flexget/*.sqlite
 flexget/*.log*
 
 roots/
-fish/generated_completions/
+*.map
+
 sublime/Camaleon.selected-preset
-fish/fish_read_history
+
+slate/slate.js
