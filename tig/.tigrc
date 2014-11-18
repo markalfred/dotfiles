@@ -203,6 +203,7 @@ bind generic	,	parent			# Move to parent
 bind generic	<Tab>	view-next		# Move focus to the next view
 bind generic	R	refresh			# Reload and refresh view
 bind generic	<F5>	refresh
+bind generic	<F4>	refresh
 bind generic	O	maximize		# Maximize the current view
 bind generic	q	view-close		# Close the current view
 bind generic	Q	quit			# Close all views and quit
