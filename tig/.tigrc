@@ -151,6 +151,8 @@ bind stage	C	@git commit -v --amend
 bind stash	P	?@git stash pop %(stash)
 bind stash	!	?@git stash drop %(stash)
 bind refs	!	?git branch -D %(branch)
+bind main	!	!?git revert %(commit)
+bind diff	!	!?git revert %(commit)
 
 bind refs	c	:!git checkout %(branch)
 bind main	c	!?git checkout %(branch)
