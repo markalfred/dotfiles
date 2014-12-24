@@ -3,6 +3,9 @@ set PATH $PATH $HOME/.rbenv/bin
 set PATH $PATH $HOME/.rbenv/shims
 rbenv rehash >/dev/null ^&1
 
+# Add python bins.
+set PATH $PATH /usr/local/Python/bin
+
 # Set work dir variable.
 set -U WORK_DIR $HOME/Repos
 
