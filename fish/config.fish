@@ -1,6 +1,6 @@
 # Initialize rbenv.
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
+set PATH $PATH $HOME/.rbenv/bin
+set PATH $PATH $HOME/.rbenv/shims
 rbenv rehash >/dev/null ^&1
 
 # Set work dir variable.
