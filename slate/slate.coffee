@@ -63,6 +63,7 @@ slate.bind chord(LEADER, 'r'), slate.operation('relaunch')
 slate.bind chord('toggle', LEADER, 'w'), slate.operation('throw', screen: 'next')
 
 slate.bind 'space:ctrl', toggleTerm = (win) ->
+  return unless win?
   if win.app().name() is 'iTerm2'
     win.doOperation slate.operation('hide', app: 'iTerm2')
   else
