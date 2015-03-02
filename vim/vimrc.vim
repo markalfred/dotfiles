@@ -8,6 +8,9 @@ syntax on
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
+" Revert cursor to line when exiting vim.
+autocmd VimLeave * let &t_me="\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+
 " Don't move cursor backwards when exiting command mode. Has added
 " benefit of immediately redrawing cursor when exiting Command Mode
 " too.
