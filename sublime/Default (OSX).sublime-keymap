@@ -27,6 +27,9 @@
   { "keys": ["alt+shift+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
   { "keys": ["alt+shift+g"], "command": "replace_next" },
 
+  // Reindent on pipe.
+  { "keys": ["|"], "command": "reindent", "args": {"single_line": false}, "context": [{ "key": "setting.command_mode", "operand": true }]},
+
   // SublimeGit.
   { "keys": ["ctrl+s"], "command": "git_status"},
   { "keys": [" "], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "},
