@@ -11,7 +11,7 @@ function git
 
   # Impliment git pull --autostash myself
   else if [ pull = $argv[1] ]
-    if [ (_git_is_dirty) ]
+    if [ (_git_has_unstaged_changes) ]
       command git stash
       command git pull
       command git stash pop
