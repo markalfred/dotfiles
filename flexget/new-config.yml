@@ -1,0 +1,39 @@
+secrets: private.yml
+
+tasks:
+  download-watched-tv-shows:
+    transmission:
+      main_file_only: yes
+    series:
+      - 'Broad City (2014)':
+          alternate_name: Broad City
+    configure_series:
+      settings:
+        set:
+          path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
+        upgrade: yes
+        quality: <=720p
+        identified_by: ep
+      from:
+        inputs:
+          - trakt_list:
+              username: '{{ secrets.trakt.username }}'
+              password: '{{ secrets.trakt.password }}'
+              # api_key: '{{ secrets.trakt.api_key }}'
+              type: shows
+              list: watched
+    discover:
+      what:
+        - emit_series: yes
+      from:
+        #- kat:
+        #    category: tv
+        #    verified: yes
+        - publichd:
+            category: ['HDTV', 'SDTV', 'TV WEB-DL']
+
+    pushbullet:
+      apikey: '{{ secrets.pushbullet.apikey }}'
+      title: 'Downloading - {{ series_name }}'
+      body: 'Season {{ series_season }}, Episode {{ series_episode }}'
+

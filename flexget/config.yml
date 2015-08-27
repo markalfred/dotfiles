@@ -4,25 +4,31 @@ tasks:
   download-watched-tv-shows:
     transmission:
       main_file_only: yes
+    verify_ssl_certificates: no
     configure_series:
       settings:
         set:
           path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
         upgrade: yes
-        quality: webrip+ <=720p
+        quality: <=720p
         identified_by: ep
       from:
         inputs:
           - trakt_list:
               username: '{{ secrets.trakt.username }}'
               password: '{{ secrets.trakt.password }}'
-              api_key: '{{ secrets.trakt.api_key }}'
-              series: watched
+              type: shows
+              list: watched
+              strip_dates: yes
     discover:
       what:
         - emit_series: yes
       from:
+        #- torrentz: verified
         - piratebay: yes
+        - isohunt: tv
+        - kat:
+            category: tv
     pushbullet:
       apikey: '{{ secrets.pushbullet.apikey }}'
       title: 'Downloading - {{ series_name }}'
@@ -37,21 +43,26 @@ tasks:
         set:
           path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
         upgrade: yes
-        quality: webrip+ <=720p
+        quality: <=720p
         identified_by: ep
       from:
         inputs:
           - trakt_list:
               username: '{{ secrets.trakt.username }}'
               password: '{{ secrets.trakt.password }}'
-              api_key: '{{ secrets.trakt.api_key }}'
-              series: watchlist
+              type: shows
+              list: watchlist
+              strip_dates: yes
     discover:
       what:
         - emit_series:
             backfill: yes
       from:
+        #- torrentz: verified
         - piratebay: yes
+        - isohunt: tv
+        - kat:
+            category: tv
     pushbullet:
       apikey: '{{ secrets.pushbullet.apikey }}'
       title: 'Downloading - {{ series_name }}'
@@ -62,16 +73,24 @@ tasks:
     transmission:
       main_file_only: yes
     series:
-      - The Daily Show:
+      - The Daily Show with Jon Stewart:
+          alternate_name: The Daily Show
           identified_by: date
           path: "/Users/mark/TV Shows/The Daily Show with Jon Stewart/"
-      - The Colbert Report:
+      - The Nightly Show with Larry Wilmore:
+          alternate_name: The Nightly Show
           identified_by: date
-          path: "/Users/mark/TV Shows/The Colbert Report/"
+          path: "/Users/mark/TV Shows/The Nightly Show with Larry Wilmore/"
+      - '@midnight':
+          alternate_name: At Midnight
+          identified_by: date
+          path: "/Users/mark/TV Shows/@midnight/"
+      - Empire 2015:
+          alternate_name: Empire
+          path: "/Users/mark/TV Shows/Empire/"
     inputs:
-      - rss: http://rss.thepiratebay.se/205
       - rss: http://showrss.info/feeds/all.rss
-      - rss: http://ezrss.it/feed/
+      #- rss: http://ezrss.it/feed/
       - rss: http://torrentz.eu/feed?q=tv
       - rss: http://rss.bt-chat.com/?group=3
     pushbullet:
@@ -81,6 +100,7 @@ tasks:
 
 
   kimbus:
+    interval: 72 hours
     transmission:
       main_file_only: yes
     configure_series:
@@ -88,30 +108,36 @@ tasks:
         set:
           path: "/Users/mark/TV Shows/{{series_name}}/Season {{series_season}}/"
         upgrade: yes
-        quality: webrip+ <=720p
+        quality: <720p
         identified_by: ep
       from:
         inputs:
           - trakt_list:
               username: '{{ secrets.kimbus_trakt.username }}'
-              api_key: '{{ secrets.kimbus_trakt.api_key }}'
-              series: watchlist
+              list: watchlist
+              type: shows
+              strip_dates: yes
     discover:
       what:
         - emit_series:
             backfill: yes
       from:
+        #- torrentz: verified
         - piratebay: yes
+        - isohunt: tv
+        - kat:
+            category: tv
 
 
   build-movie-queue:
     accept_all: yes
-    queue_movies: yes
+    movie_queue: add
     trakt_list:
       username: '{{ secrets.trakt.username }}'
       password: '{{ secrets.trakt.password }}'
-      api_key: '{{ secrets.trakt.api_key }}'
-      movies: watchlist
+      list: watchlist
+      type: movies
+      strip_dates: yes
     pushbullet:
       apikey: '{{ secrets.pushbullet.apikey }}'
       title: 'Added to Queue - {{ movie_name }}'
@@ -119,26 +145,30 @@ tasks:
 
 
   kimbus-build-movie-queue:
+    interval: 72 hours
     accept_all: yes
-    queue_movies: yes
+    movie_queue: add
     trakt_list:
       username: '{{ secrets.kimbus_trakt.username }}'
-      api_key: '{{ secrets.kimbus_trakt.api_key }}'
-      movies: watchlist
+      list: watchlist
+      type: movies
+      strip_dates: yes
 
 
   download-movie-queue:
     interval: 2 hours
-    movie_queue: yes
     transmission:
       path: /Users/mark/Movies
-    quality: dvdrip+ <1080p
-    torrent_alive: 50
+    #quality: hdrip+ 720p+
     discover:
       what:
         - emit_movie_queue: yes
       from:
+        #- torrentz: good
         - piratebay: yes
+        - isohunt: movies
+        - kat: 
+            category: movies
     pushbullet:
       apikey: '{{ secrets.pushbullet.apikey }}'
       title: 'Downloading - {{ movie_name }}'
