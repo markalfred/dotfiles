@@ -1,6 +1,6 @@
 # Initialize rbenv.
-set PATH $PATH $HOME/.rbenv/bin
-set PATH $PATH $HOME/.rbenv/shims
+set PATH $HOME/.rbenv/bin $PATH
+set PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 
 # Add python bins.
