@@ -8,6 +8,7 @@ Package Control.last-run
 Package Control.*-ca-bundle
 
 configstore/
+direnv/
 
 flexget/private.yml
 flexget/received/
