@@ -29,11 +29,13 @@
 	b = branch
 
 	c- = checkout -
+	ca = checkout -- .
 	r- = rebase - -i
 	cb = checkout -b
 	cB = checkout -B
 	cm = checkout master
 	rc = rebase --continue
+	ra = rebase --abort
 	al = add .
 	rem = rebase master
 	rpo = remote prune origin
