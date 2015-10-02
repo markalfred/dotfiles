@@ -22,5 +22,8 @@ source $fish_path/utils/git_utils.fish
 # Better search results background.
 set fish_color_search_match --background=5f0087
 
+# Initialize direnv.
+eval (direnv hook fish)
+
 # Aliases
 alias tig 'tig --all'
