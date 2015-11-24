@@ -169,6 +169,9 @@ bind main	R	:!git rebase -i %(commit)^ # Rebase, starting at selected commit
 bind diff	R	:!git rebase -i %(commit)^
 bind refs	R	:!git rebase -i %(branch)
 
+bind main	f	!?git commit --fixup %(commit)
+bind diff	f	!?git commit --fixup %(commit)
+
 bind refs	n	@git checkout -b "mb/%(prompt Enter branch name: mb/)"
 bind refs r @git branch -m "mb/%(prompt Enter branch name: mb/)"
 
