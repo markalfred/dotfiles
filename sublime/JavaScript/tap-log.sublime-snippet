@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+.tap(v => console.log(${1:'${0:label}', }_.cloneDeep(v)))
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>tl</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
