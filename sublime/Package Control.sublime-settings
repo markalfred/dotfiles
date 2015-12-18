@@ -1,8 +1,13 @@
 {
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"AAAPackageDev",
 		"All Autocomplete",
+		"Babel",
 		"Camaleon",
 		"Cucumber",
 		"DashDoc",
@@ -11,13 +16,18 @@
 		"GitGutter",
 		"Jade",
 		"LESS",
+		"Package Control",
 		"PowerCursors",
 		"Pretty JSON",
+		"Ruby Slim",
 		"Sass",
 		"SCSS",
-		"Shell Command",
+		"ShellCommand",
 		"Stylus",
 		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-rubocop",
 		"Theme - Flatland",
 		"Theme - Spacegray",
 		"Tomorrow Color Schemes",
