@@ -134,6 +134,14 @@
       { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
     ]
   },
+  { "keys": ["("], "command": "insert_snippet", "args": {"contents": "($1);"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "selector", "operator": "equal", "operand": "source.js" },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
+    ]
+  },
   { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${1:$SELECTION})"}, "context":
     [
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
