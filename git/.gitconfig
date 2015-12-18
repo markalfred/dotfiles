@@ -28,17 +28,20 @@
 	d = diff
 	a = add
 	b = branch
+	co = commit
 
 	c- = checkout -
 	ca = checkout -- .
-	r- = rebase - -i
 	cb = checkout -b
 	cB = checkout -B
 	cm = checkout master
+	al = add .
+	cof = commit --fixup
+	r- = rebase - -i
 	rc = rebase --continue
 	ra = rebase --abort
-	al = add .
 	rem = rebase master
+	remi = rebase master -i
 	rpo = remote prune origin
 	up = !git fetch && git checkout master && git pull && git checkout -
 
