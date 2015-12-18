@@ -956,7 +956,11 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>0</string>
+	<string>6</string>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
+	<key>NSFontPanelPreviewHeight</key>
+	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Repos/base16-builder/output/iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -966,6 +970,8 @@
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
+	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
@@ -986,14 +992,22 @@
 	<array/>
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>586 519 214 309 0 0 2560 1418 </string>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>173 736 459 270 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>21 920 796 474 0 0 2560 1418 </string>
+	<string>186 900 606 456 0 0 2560 1418 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>970 933 616 174 0 0 2560 1418 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>478 -536 620 392 68 -900 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>910 615 740 598 0 0 2560 1418 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>230 834 592 584 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>643 361 1270 741 0 0 2560 1418 </string>
+	<string>1287 729 1249 667 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>813 146 1417 877 0 0 2560 1418 </string>
+	<string>625 408 1361 753 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_63C55AF1-0149-4E4E-B4C0-4B887FA6F274</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_862BB286-0B05-4507-B7F2-A4461A95A2B9</key>
@@ -2410,7 +2424,7 @@
 					<key>Action</key>
 					<integer>37</integer>
 					<key>Text</key>
-					<string>862BB286-0B05-4507-B7F2-A4461A95A2B9</string>
+					<string>53E1D9FC-311A-40E4-8594-E545D2AB676E</string>
 				</dict>
 				<key>0xf70b-0x20000</key>
 				<dict>
@@ -4292,6 +4306,8 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
+	<key>NoSyncSuppressAnnyoingBellOffer</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -4355,7 +4371,7 @@
 	<key>RightOption</key>
 	<integer>3</integer>
 	<key>SUAutomaticallyUpdate</key>
-	<true/>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -4365,7 +4381,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-09-15T18:53:09Z</date>
+	<date>2015-12-17T17:13:37Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -4390,6 +4406,8 @@
 	<integer>10</integer>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1414591360</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -4411,6 +4429,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20140914-nightly</string>
+	<string>2.9.20150923-nightly</string>
 </dict>
 </plist>

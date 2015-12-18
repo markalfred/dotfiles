@@ -15,14 +15,6 @@
             "Spacegray.sublime-theme",
             // ...the second item specifies the color scheme.
             "Packages/User/base16-textmate/base16-ocean.dark.tmTheme"
-        ],
-
-        // Dark
-        [
-            // The first item specifies the UI theme for this preset, ...
-            "Spacegray Eighties.sublime-theme",
-            // ...the second item specifies the color scheme.
-            "Packages/User/base16-textmate/base16-eighties.dark.tmTheme"
         ]
     ]
 }
