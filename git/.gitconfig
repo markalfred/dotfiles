@@ -37,6 +37,7 @@
 	cm = checkout master
 	al = add .
 	cof = commit --fixup
+	cos = commit --squash
 	r- = rebase - -i
 	rc = rebase --continue
 	ra = rebase --abort
