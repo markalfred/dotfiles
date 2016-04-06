@@ -29,7 +29,7 @@
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
-	<false/>
+	<true/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>base16-eighties.dark.256</key>
@@ -984,7 +984,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>415</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -993,7 +993,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>586 519 214 309 0 0 2560 1418 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>173 736 459 270 0 0 2560 1418 </string>
+	<string>572 -456 459 270 68 -900 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>186 900 606 456 0 0 2560 1418 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
@@ -1005,7 +1005,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 834 592 584 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1287 729 1249 667 0 0 2560 1418 </string>
+	<string>90 -875 1396 829 68 -900 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>625 408 1361 753 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_63C55AF1-0149-4E4E-B4C0-4B887FA6F274</key>
@@ -1673,7 +1673,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>AnonymousPro 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -1845,11 +1845,11 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.1071159638554215</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -2516,7 +2516,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>AnonymousPro 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -2688,11 +2688,11 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.0977091961596386</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -3315,7 +3315,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>AnonymousPro 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -4381,7 +4381,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-17T17:13:37Z</date>
+	<date>2016-01-29T22:26:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
