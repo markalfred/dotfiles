@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "ESLint: Lint and Fix",
+        "command": "shell_command",
+        "args": {
+            "command": "eslint --fix --quiet ${file}",
+            "panel": true
+        }
+    }
+]
