@@ -62,12 +62,17 @@ slate.bind chord(LEADER, 'h'), slate.operation('move', _.extend({}, bottomLeft, 
 slate.bind chord(LEADER, 'r'), slate.operation('relaunch')
 slate.bind chord('toggle', LEADER, 'w'), slate.operation('throw', screen: 'next')
 
+TERM_TITLE = 'iTerm2'
+last = null
+
 slate.bind 'space:ctrl', toggleTerm = (win) ->
   return unless win?
-  if win.app().name() is 'iTerm2'
-    win.doOperation slate.operation('hide', app: 'iTerm2')
+  current = win.app().name()
+  if current is TERM_TITLE
+    win.doOperation slate.operation('focus', app: last, direction: 'behind')
   else
-    win.doOperation slate.operation('focus', app: 'iTerm2')
+    last = current
+    win.doOperation slate.operation('focus', app: TERM_TITLE)
 
 slate.bind chord(LEADER, 'c'), centerWindow = (win) ->
   win.doOperation slate.operation('move', _.extend({}, center(win.size()), sameSize(win.size())))
