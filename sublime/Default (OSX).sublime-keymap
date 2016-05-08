@@ -11,6 +11,8 @@
 
   { "keys": ["ctrl+o"], "command": "toggle_overwrite" },
 
+  { "keys": ["ctrl+shift+space"], "command": "auto_complete" },
+
   { "keys": ["super+."], "command": "open_file", "args": {"contents": "[\n $0\n]\n", "file": "${packages}/User/Default ($platform).sublime-keymap"} },
 
   // Swap selections.
