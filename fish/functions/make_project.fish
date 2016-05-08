@@ -1,5 +1,5 @@
 function make_project
-  set -l project_file (_current_directory).sublime-project
+  set -l project_file (basename $PWD).sublime-project
   echo \
 '{
   "folders":
