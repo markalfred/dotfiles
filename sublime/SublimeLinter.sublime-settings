@@ -74,7 +74,7 @@
 			"php": "html",
 			"python django": "python"
 		},
-		"warning_color": "DDB700",
+		"warning_color": "982",
 		"wrap_find": true
 	}
 }
