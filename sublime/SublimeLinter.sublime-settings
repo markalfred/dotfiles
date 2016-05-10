@@ -69,6 +69,7 @@
 			"html (rails)": "html",
 			"html 5": "html",
 			"javascript (babel)": "javascript",
+			"jsx": "javascript",
 			"magicpython": "python",
 			"php": "html",
 			"python django": "python"
