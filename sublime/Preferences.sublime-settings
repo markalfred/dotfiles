@@ -16,6 +16,7 @@
 	[
 		".*",
 		"bower_components",
+		"log",
 		"node_modules",
 		"public",
 		"zzzzz_this_is_fake"
