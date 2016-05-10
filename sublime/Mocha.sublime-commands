@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Mocha: Test Current File",
+        "command": "shell_command",
+        "args": {
+            "command": "mocha --reporter dot ${file}",
+            "panel": true
+        }
+    }
+]
