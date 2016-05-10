@@ -61,6 +61,7 @@ slate.bind chord(LEADER, ';'), slate.operation('move', _.extend({}, bottomRight,
 slate.bind chord(LEADER, 'h'), slate.operation('move', _.extend({}, bottomLeft, halfWidth, halfHeight))
 slate.bind chord(LEADER, 'r'), slate.operation('relaunch')
 slate.bind chord('toggle', LEADER, 'w'), slate.operation('throw', screen: 'next')
+slate.bind chord('toggle', LEADER, 'e'), slate.operation('throw', screen: 'previous')
 
 TERM_TITLE = 'iTerm2'
 last = null
