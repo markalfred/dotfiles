@@ -3,12 +3,12 @@
 # Create symlinks for files expected to be in particular places.
 
 if [ ! -d ~/.config/ ]
-  then ln -s ~/Repos/dotfiles/ ~/.config/ > /dev/null 2>&1
+  then ln -s ~/Repos/dotfiles/ ~/.config > /dev/null 2>&1
+else
+  echo '~/.config already exists. You should delete it and run this again.'
 fi
 
-if [ ! -d ~/.config/ ]
-  then ln -s '/Users/mark/Library/Application Support/Sublime Text 3/Packages/User' ~/.config/sublime/ > /dev/null 2>&1
-fi
+ln -s ~/.config/sublime '/Users/mark/Library/Application Support/Sublime Text 3/Packages/User' > /dev/null 2>&1
 
 ln -s ~/.config/.eslintrc.js ~/.eslintrc.js
 ln -s ~/.config/.spacemacs ~/.spacemacs
