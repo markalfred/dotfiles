@@ -1,3 +1,6 @@
+# Turn off fish greeting
+set fish_greeting ''
+
 # Initialize rbenv.
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
