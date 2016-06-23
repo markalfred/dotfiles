@@ -2,5 +2,10 @@
   "disable_tab_abbreviations_for_scopes": "source.js.jsx",
   "preferences": {
     "stylus.valueSeparator": ": "
+  },
+  "syntaxProfiles": {
+    "jsx": {
+      "attr_quotes": "single"
+    }
   }
 }
