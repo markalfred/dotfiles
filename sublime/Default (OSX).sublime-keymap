@@ -92,29 +92,6 @@
   { "keys": ["super+shift+home"], "command": "move_to", "args": {"to": "bof", "extend": true} },
   { "keys": ["super+shift+end"], "command": "move_to", "args": {"to": "eof", "extend": true} },
 
-  // Emmet JSX support.
-  {
-    "keys": ["tab"], "command": "expand_abbreviation_by_tab", "context": [
-      {
-        "operand": "source.js.jsx",
-        "operator": "equal",
-        "match_all": true,
-        "key": "selector"
-      },
-      {
-        "key": "selection_empty",
-        "operator": "equal",
-        "operand": true,
-        "match_all": true
-      }
-    ]
-  },
-  { "keys": ["tab"], "command": "next_field", "context":
-    [
-      { "key": "has_next_field", "operator": "equal", "operand": true }
-    ]
-  },
-
   // Override pairing so that tab puts cursor outside of the pair
   // Auto-pair quotes
   { "keys": ["\""], "command": "insert_snippet", "args": {"contents": "\"$1\""}, "context":
