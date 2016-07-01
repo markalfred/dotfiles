@@ -37,6 +37,8 @@
   { "keys": [" "], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "},
     "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
 
+  { "keys": ["^"], "command": "git_push", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
+  { "keys": ["v"], "command": "git_pull", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
   { "keys": [","], "command": "git_custom", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-status" }]},
 
   { "keys": ["escape"], "command": "close", "context": [{ "key": "selector", "operator": "equal", "operand": "text.git-commit" }, { "key": "setting.command_mode", "operand": true }]},
