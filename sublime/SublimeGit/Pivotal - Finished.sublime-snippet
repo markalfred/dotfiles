@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-[Finishes #${0}]
+[Finishes ${0}]
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>fin</tabTrigger>
