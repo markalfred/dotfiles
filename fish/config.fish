@@ -37,3 +37,7 @@ eval (direnv hook fish)
 
 # Aliases
 alias tig 'tig --all'
+alias rdm 'rake db:migrate'
+alias rdms 'rake db:migrate:status'
+alias mem 'mix ecto.migrate'
+alias mems 'mix ecto.migrations'
