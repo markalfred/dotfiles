@@ -23,7 +23,7 @@ source $fish_path/utils/base_utils.fish
 source $fish_path/utils/git_utils.fish
 
 # Better search results background.
-set fish_color_search_match --background=5f0087
+set fish_color_search_match --background=white
 
 # Initialize direnv.
 eval (direnv hook fish)
