@@ -49,9 +49,12 @@
 	rem = rebase master
 	remi = rebase master -i
 	rpo = remote prune origin
+
 	up = !git fetch && git checkout master && git pull && git checkout -
+	release = !git up && git checkout production && git merge master
 
 	undo = reset HEAD^
+	wip = !git add . && git commit -m WIP
 
 	open = !subl $(git status --short | awk '$1 ~ /^[^ ]/ {print $2}')
 	conflicts = !subl $(git status --short | awk '$1 ~ /^[AUD][AUD]/ {print $2}')
