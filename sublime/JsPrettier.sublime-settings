@@ -1,0 +1,14 @@
+{
+  "auto_format_on_save": true,
+  "auto_format_on_save_excludes": [
+    "*/node_modules/*",
+    "*/.git/*",
+    "*.json"
+  ],
+  "prettier_options": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "semi": true,
+    "printWidth": 80,
+  }
+}
