@@ -70,6 +70,7 @@ set show-changes		= yes		# Show changes commits in the main view?
 set wrap-lines			= no		# Wrap long lines in pager views?
 set tab-size			= 8		# Number of spaces to use when expanding tabs
 set line-graphics		= default	# Enum: ascii, default, utf-8
+set diff-highlight	= true
 
 # Format reference names based on type.
 #  - head		: The current HEAD.
@@ -87,7 +88,7 @@ set reference-format		= ~(head)~ branch <tag> remote (tracked-remote) ~replace~
 
 # Settings controlling how content is read from Git
 set commit-order		= default	# Enum: default, topo, date, reverse (main)
-set status-untracked-dirs	= yes		# Show files in untracked directories? (status)
+set status-show-untracked-dirs	= yes		# Show files in untracked directories? (status)
 set ignore-space		= no		# Enum: no, all, some, at-eol (diff)
 set show-notes			= yes		# When non-bool passed as `--show-notes=...` (diff)
 #set diff-context		= 3		# Number of lines to show around diff changes (diff)
@@ -95,7 +96,7 @@ set show-notes			= yes		# When non-bool passed as `--show-notes=...` (diff)
 #set blame-options		= -C -C -C	# User-defined options for `tig blame` (blame)
 
 # Misc
-set refresh-mode		= periodic	# Enum: manual, auto, after-command, periodic
+set refresh-mode		= auto	# Enum: manual, auto, after-command, periodic
 set refresh-interval		= 2		# Interval in seconds between refreshes
 set ignore-case			= yes		# Ignore case when searching?
 set focus-child			= yes		# Move focus to child view when opened?
@@ -161,6 +162,7 @@ bind main	C	!?git checkout %(commit)
 bind diff	c	!?git checkout %(commit)
 
 bind main	M	!?git merge %(branch)
+bind diff	M	!?git merge %(commit)
 
 bind main	P	:!git cherry-pick -e %(commit)
 bind diff	P	:!git cherry-pick -e %(commit)
@@ -290,7 +292,7 @@ bind generic	S	:source ~/.tigrc	# Reload .tigrc file
 bind generic	e	edit			# Open in editor
 bind generic	;	prompt
 bind generic	:	!git "%(prompt git )"	# Open the prompt (with git prepended)
-bind generic	<C-L>	screen-redraw		# Redraw the screen
+bind generic	<C-L>	refresh		# Redraw the screen
 bind generic	z	stop-loading		# Stop all loading views
 bind generic	v	show-version		# Show Tig version
 
