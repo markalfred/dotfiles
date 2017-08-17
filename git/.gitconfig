@@ -39,6 +39,8 @@
 	cB = checkout -B
 	cm = checkout master
 	al = add .
+	aa = add -A
+	au = add -u
 	cof = commit --fixup
 	cos = commit --squash
 	r- = rebase - -i
