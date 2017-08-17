@@ -6,6 +6,7 @@
 [core]
 	editor = subl -ws
 	excludesfile = ~/.config/git/.gitignore_global
+	ignorecase = false
 [push]
 	default = current
 [branch]
