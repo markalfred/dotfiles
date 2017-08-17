@@ -6,7 +6,7 @@
             // The first item specifies the UI theme for this preset, ...
             "Spacegray Light.sublime-theme",
             // ...the second item specifies the color scheme.
-            "Packages/User/base16-textmate/base16-ocean.light.tmTheme"
+            "Packages/User/SublimeLinter/base16-ocean.light (SL).tmTheme"
         ],
 
         // Middle
@@ -14,7 +14,7 @@
             // The first item specifies the UI theme for this preset, ...
             "Spacegray.sublime-theme",
             // ...the second item specifies the color scheme.
-            "Packages/User/base16-textmate/base16-ocean.dark.tmTheme"
+            "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme"
         ]
     ]
 }
