@@ -1,6 +1,8 @@
 {
     "git_commit_verbose": true,
     "git_commit_pedantic": true,
+    "git_show_status_help": false,
+    "git_status_open_files_transient": false,
 
     "git_extensions": {
         "git_flow": false,
