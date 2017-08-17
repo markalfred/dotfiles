@@ -10,24 +10,34 @@
 	[
 		"*.pyc",
 		".DS_Store",
+		".eslintcache",
+		"*.dump",
 		"*.sublime-workspace"
 	],
 	"folder_exclude_patterns":
 	[
-		".*",
+		".git",
 		"bower_components",
+		"chrome",
 		"log",
 		"node_modules",
 		"public",
+		"priv",
+		"tmp",
 		"zzzzz_this_is_fake"
 	],
-	"font_face": "Cousine",
-	"font_size": 11,
+	"font_face": "Noto Mono",
+	"font_size": 10,
 	"highlight_line": false,
 	"ignored_packages":
 	[
 	],
 	"open_files_in_new_window": false,
+	"rulers":
+	[
+		80,
+		120
+	],
 	"scroll_past_end": false,
 	"scroll_speed": 0.15,
 	"show_full_path": true,
