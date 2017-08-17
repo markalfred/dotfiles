@@ -1,11 +1,16 @@
 module.exports = {
-  parser: 'babel-eslint',
-  ecmaFeatures: {},
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   extends: 'eslint:recommended',
   env: {
     browser: true,
     es6: true,
     mocha: true,
+    jest: true,
     node: true
   },
   rules: {
@@ -23,7 +28,8 @@ module.exports = {
     'no-shadow': 2,
     'no-undef': 2,
     'no-unused-vars': 2,
-    'quotes': [2, 'single', 'avoid-escape']
+    'quotes': [2, 'single', 'avoid-escape'],
+    'semi': [2, 'never']
   },
   plugins: [],
   globals: {
