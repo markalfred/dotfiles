@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+const ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} = (props) => {
+  return (
+    ${4:<${5:div}></${5:div}>}
+  );
+};
+
+${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}}.propTypes = {
+  ${6:children: pt.node,}
+};
+
+export default ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}};
+]]></content>
+    <tabTrigger>rfc</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: functional component skeleton</description>
+</snippet>
