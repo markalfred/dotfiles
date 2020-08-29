@@ -8,6 +8,8 @@
 	editor = subl -ws
 	excludesfile = ~/.config/git/.gitignore_global
 	ignorecase = false
+[status]
+  showUntrackedFiles = all
 [push]
 	default = current
 [branch]
