@@ -67,6 +67,7 @@
 	wip = !git add . && git commit -m 'WIP [ci skip]'
 
 	open = !subl $(git status --short | awk '$1 ~ /^[^ ]/ {print $2}')
+	open-last = !subl $(git show HEAD --name-only --oneline)
 	conflicts = !subl $(git status --short | awk '$1 ~ /^[AUD][AUD]/ {print $2}')
 
 	ignore = update-index --assume-unchanged
