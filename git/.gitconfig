@@ -1,6 +1,7 @@
 [user]
 	email = mark.alfred.battersby@gmail.com
 	name = Mark Battersby
+	signingkey = A9C960DD0C970253
 [color]
 	ui = true
 [core]
