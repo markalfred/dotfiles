@@ -19,7 +19,7 @@
         "caption": "Git: Open Pull Request",
         "command": "shell_command",
         "args": {
-            "command": "pullr -n --plaintext",
+            "command": "git pull-request",
             "panel": true
         }
     }
