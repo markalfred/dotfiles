@@ -54,6 +54,8 @@
 	up = !git fetch && git checkout master && git pull && git checkout -
 	release = !git up && git checkout production && git merge master
 
+	pu = push -u
+
 	undo = reset HEAD^
 	wip = !git add . && git commit -m WIP
 

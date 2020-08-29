@@ -1,5 +1,5 @@
 function git
-  if [ push = $argv[1] ]
+  if [ push = $argv[1] ]; or [ pu = $argv[1] ]
     if [ (_git_branch_name) = 'master' ]; or [ (_git_branch_name) = 'production' ]
       set -l confirm (input 'Are you sure you want to push this branch?')
       if [ $confirm = y ]
