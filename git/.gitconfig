@@ -61,6 +61,7 @@
 	changelog = log origin/production..production --no-merges --oneline --reverse
 
 	pu = push -u
+	pr = !hub pull-request
 
 	undo = reset HEAD^
 	wip = !git add . && git commit -m WIP
