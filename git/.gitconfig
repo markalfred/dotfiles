@@ -54,6 +54,8 @@
 	remi = rebase master -i
 	rpo = remote prune origin
 
+	arc = !git au && git rc
+
 	up = !git fetch && git checkout master && git pull && git checkout -
 	release = !git up && git checkout production && git merge master
 
