@@ -20,3 +20,4 @@ ln -s ~/.config/slate/slate.js ~/.slate.js
 ln -s ~/.config/tig/.tigrc ~/.tigrc
 ln -s ~/.config/tmux/tmux.conf ~/.tmux.conf
 ln -s ~/.config/vim/vimrc.vim ~/.vimrc
+ln -s ~/.config/psqlrc ~/.psqlrc
