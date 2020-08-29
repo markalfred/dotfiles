@@ -35,6 +35,9 @@ set fish_color_search_match --background=white
 # Initialize direnv.
 eval (direnv hook fish)
 
+# Initialize asdf.
+source ~/.asdf/asdf.fish
+
 # Aliases
 alias tig 'tig --all'
 alias rdm 'rake db:migrate'
