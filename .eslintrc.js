@@ -27,7 +27,7 @@ module.exports = {
     'no-multiple-empty-lines': [2, { max: 1 }],
     'no-shadow': 2,
     'no-undef': 2,
-    'no-unused-vars': 2,
+    "no-unused-vars": [2, { "argsIgnorePattern": "^_.+",  "varsIgnorePattern": "^_.+" }],
     'quotes': [2, 'single', 'avoid-escape'],
     'semi': [2, 'never']
   },
