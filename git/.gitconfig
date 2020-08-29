@@ -58,6 +58,7 @@
 
 	up = !git fetch && git checkout master && git pull && git checkout -
 	release = !git up && git checkout production && git pull && git merge master
+	changelog = log origin/production..production --no-merges --oneline --reverse
 
 	pu = push -u
 
