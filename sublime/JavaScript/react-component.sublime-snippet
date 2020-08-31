@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+class ${1} extends Component {
+	static propTypes = {}
+
+	state = {}
+
+	componentDidMount() {}
+
+	render() {}
+}
+
+export default ${1};
+]]></content>
+    <tabTrigger>rc</tabTrigger>
+    <scope>source.js</scope>
+    <description>React: component skeleton</description>
+</snippet>
