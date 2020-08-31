@@ -1,0 +1,5 @@
+// Settings in here override those in "Case Conversion/CaseConversion.sublime-settings",
+
+{
+  "detect_acronyms": false,
+}

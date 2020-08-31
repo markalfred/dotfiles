@@ -3,12 +3,12 @@
   "auto_format_on_save_excludes": [
     "*/node_modules/*",
     "*/.git/*",
-    "*.json"
+    // "*.json"
   ],
   "prettier_options": {
     "singleQuote": true,
-    "trailingComma": "all",
-    "semi": true,
+    // "trailingComma": "all",
+    "semi": false,
     "printWidth": 80,
   }
 }

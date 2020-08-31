@@ -7,5 +7,8 @@
     "jsx": {
       "attr_quotes": "single"
     }
-  }
+  },
+  "telemetry": false,
+  "uid": "ecbcb2c5-9c8c-423e-a932-486503c66a6b"
+
 }

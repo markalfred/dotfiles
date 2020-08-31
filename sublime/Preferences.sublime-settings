@@ -17,21 +17,29 @@
 	"folder_exclude_patterns":
 	[
 		".git",
+		".elixir_ls",
+		"_build",
 		"bower_components",
 		"chrome",
+		"credits",
 		"log",
 		"node_modules",
-		"public",
-		"priv",
+		"priv/static",
 		"tmp",
 		"zzzzz_this_is_fake"
 	],
-	"font_face": "Noto Mono",
+	"font_face": "Fira Code Retina",
 	"font_size": 10,
 	"highlight_line": false,
 	"ignored_packages":
 	[
+		"GitGutter",
+		"GoSublime",
+		"SublimeLinter-contrib-credo",
+		"SublimeLinter-gotype",
+		"TypeScript"
 	],
+	"mini_map": false,
 	"open_files_in_new_window": false,
 	"rulers":
 	[
