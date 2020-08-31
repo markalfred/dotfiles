@@ -1,16 +1,13 @@
 <snippet>
     <content><![CDATA[
-const ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}} = (props) => {
-  return (
-    ${4:<${5:div}></${5:div}>}
-  );
-};
+const ${1:${TM_FILENAME/(^\w)|(-(\w))|(?:\.\w+)*$/\U$1$3/g}} = (props) =>
+  ${4:<${5:div}></${5:div}>}
 
-${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}}.propTypes = {
+${1}.propTypes = {
   ${6:children: pt.node,}
 };
 
-export default ${1:${TM_FILENAME/(.?\w*)(?:\.\w+)*$/$1/g}};
+export default ${1};
 ]]></content>
     <tabTrigger>rfc</tabTrigger>
     <scope>source.js</scope>
