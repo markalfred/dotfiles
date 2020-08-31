@@ -161,7 +161,7 @@ bind main	c	!?git checkout %(branch)
 bind main	C	!?git checkout %(commit)
 bind diff	c	!?git checkout %(commit)
 
-bind main	M	!?git merge %(branch)
+bind main	M	!?git merge %(commit)
 bind diff	M	!?git merge %(commit)
 
 bind main	P	:!git cherry-pick -e %(commit)
