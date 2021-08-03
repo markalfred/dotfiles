@@ -36,7 +36,7 @@ set fish_color_search_match --background=white
 eval (direnv hook fish)
 
 # Initialize asdf.
-source ~/.asdf/asdf.fish
+source /usr/local/opt/asdf/asdf.fish
 
 # Aliases
 alias tig 'tig --all'
@@ -44,3 +44,5 @@ alias rdm 'rake db:migrate'
 alias rdms 'rake db:migrate:status'
 alias mem 'mix ecto.migrate'
 alias mems 'mix ecto.migrations'
+
+fish_add_path /usr/local/sbin
