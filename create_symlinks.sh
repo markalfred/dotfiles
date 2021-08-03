@@ -8,7 +8,7 @@ else
   echo '~/.config already exists. You should delete it and run this again.'
 fi
 
-ln -s ~/.config/sublime '/Users/mark/Library/Application Support/Sublime Text 3/Packages/User' > /dev/null 2>&1
+ln -s ~/.config/sublime ~/Library/Application\ Support/Sublime\ Text/Packages/User > /dev/null 2>&1
 
 ln -s ~/.config/.eslintrc.js ~/.eslintrc.js
 ln -s ~/.config/.spacemacs ~/.spacemacs
