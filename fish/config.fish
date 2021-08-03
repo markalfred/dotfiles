@@ -1,6 +1,9 @@
 # Turn off fish greeting
 set fish_greeting ''
 
+# Initialize asdf.
+source (brew --prefix asdf)/asdf.fish
+
 # Initialize rbenv.
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
@@ -34,9 +37,6 @@ set fish_color_search_match --background=white
 
 # Initialize direnv.
 eval (direnv hook fish)
-
-# Initialize asdf.
-source /usr/local/opt/asdf/asdf.fish
 
 # Aliases
 alias tig 'tig --all'
