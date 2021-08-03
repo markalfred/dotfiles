@@ -11,35 +11,35 @@ function _git_subdirectory
 end
 
 function _git_branch_name
-  echo (command git symbolic-ref --short HEAD ^/dev/null)
+  echo (command git symbolic-ref --short HEAD 2> /dev/null)
 end
 
 function _git_is_dirty
-  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+  echo (command git status -s --ignore-submodules=dirty 2> /dev/null)
 end
 
 function _git_has_staged_changes
-  echo (command git status | grep 'Changes to be committed:' ^/dev/null)
+  echo (command git status | grep 'Changes to be committed:' 2> /dev/null)
 end
 
 function _git_has_unstaged_changes
-  echo (command git status | grep 'Changes not staged for commit:' ^/dev/null)
+  echo (command git status | grep 'Changes not staged for commit:' 2> /dev/null)
 end
 
 function _git_has_untracked_files
-  echo (command git status | grep 'Untracked files:' ^/dev/null)
+  echo (command git status | grep 'Untracked files:' 2> /dev/null)
 end
 
 function _git_has_stash
-  echo (command git stash list ^/dev/null)
+  echo (command git stash list 2> /dev/null)
 end
 
 function _git_stash_is_on_current_branch
-  echo (command git stash list --grep (_git_branch_name) ^/dev/null)
+  echo (command git stash list --grep (_git_branch_name) 2> /dev/null)
 end
 
 function _git_branch_has_upstream
-  command git show "@{u}" >/dev/null 2>/dev/null
+  command git show "@{u}" >/dev/null 2> /dev/null
   return $status
 end
 
