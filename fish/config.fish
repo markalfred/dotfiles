@@ -1,6 +1,9 @@
 # Turn off fish greeting
 set fish_greeting ''
 
+# Initialize homebrew.
+eval (/opt/homebrew/bin/brew shellenv)
+
 # Initialize asdf.
 source (brew --prefix asdf)/asdf.fish
 
