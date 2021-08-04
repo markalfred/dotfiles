@@ -33,11 +33,9 @@
 	"highlight_line": false,
 	"ignored_packages":
 	[
-		"GitGutter",
-		"GoSublime",
 		"SublimeLinter-contrib-credo",
 		"SublimeLinter-gotype",
-		"TypeScript"
+		"TypeScript",
 	],
 	"mini_map": false,
 	"open_files_in_new_window": false,
@@ -58,5 +56,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_command_mode_on_save": true,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
 }

@@ -7,13 +7,10 @@
 	[
 		"All Autocomplete",
 		"Babel",
-		"Camaleon",
 		"CSS Snippets",
 		"Elixir",
 		"Emmet",
 		"fish",
-		"GitGutter",
-		"GoSublime",
 		"Increment Selection",
 		"JsPrettier",
 		"JSX",
@@ -40,5 +37,5 @@
 		"Tomorrow Color Schemes",
 		"TypeScript",
 		"VimL"
-	]
+	],
 }
