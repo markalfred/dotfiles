@@ -63,7 +63,7 @@ function fish_prompt
 
   # Finally, show ssh host if connected.
   if test -n "$SSH_CONNECTION"
-    echo $green (_current_host)
+    print $green ' ' (_current_host)
   end
 
   print $interactive_mode_color ' ⟩ ' $normal
