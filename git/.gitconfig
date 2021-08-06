@@ -57,17 +57,13 @@
 	arc = !git au && git rc
 
 	up = !git fetch && git checkout master && git pull && git checkout -
-	release = !git up && git checkout production && git pull && git merge master
-	changelog = log origin/production..production --no-merges --oneline --reverse
-
-	pu = push -u
-	pr = !hub pull-request
+	pr = !gh pr create
+	release = !git up && git checkout production && git merge master
 
 	undo = reset HEAD^
-	wip = !git add . && git commit -m 'WIP [ci skip]'
+	wip = !git add . && git commit -m WIP
 
 	open = !subl $(git status --short | awk '$1 ~ /^[^ ]/ {print $2}')
-	open-last = !subl $(git show HEAD --name-only --oneline)
 	conflicts = !subl $(git status --short | awk '$1 ~ /^[AUD][AUD]/ {print $2}')
 
 	ignore = update-index --assume-unchanged
