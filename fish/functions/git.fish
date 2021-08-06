@@ -7,11 +7,6 @@ function git
       end
     else
       command git $argv
-
-      set -l open_pr (input 'Do you want to open a PR?')
-      if [ $open_pr = y ]
-        hub pull-request
-      end
     end
 
   # Impliment git pull --autostash myself
