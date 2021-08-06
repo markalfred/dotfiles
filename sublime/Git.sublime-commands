@@ -19,7 +19,7 @@
         "caption": "Git: Open Pull Request",
         "command": "shell_command",
         "args": {
-            "command": "git pull-request",
+            "command": "gh pr create --fill --web",
             "panel": true
         }
     }
