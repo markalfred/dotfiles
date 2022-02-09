@@ -41,7 +41,7 @@
 	ca = checkout -- .
 	cb = checkout -b
 	cB = checkout -B
-	cm = checkout master
+	cm = checkout main
 	al = add .
 	aa = add -A
 	au = add -u
@@ -50,15 +50,15 @@
 	r- = rebase - -i
 	rc = rebase --continue
 	ra = rebase --abort
-	rem = rebase master
-	remi = rebase master -i
+	rem = rebase main
+	remi = rebase main -i
 	rpo = remote prune origin
 
 	arc = !git au && git rc
 
-	up = !git fetch && git checkout master && git pull && git checkout -
+	up = !git fetch && git checkout main && git pull && git checkout -
 	pr = !gh pr create
-	release = !git up && git checkout production && git merge master
+	release = !git up && git checkout production && git merge main
 
 	undo = reset HEAD^
 	wip = !git add . && git commit -m WIP
