@@ -3,7 +3,9 @@
 	"auto_complete_with_fields": true,
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
+	"color_scheme": "auto",
+	"light_color_scheme": "Packages/User/SublimeLinter/base16-ocean.light (SL).tmTheme",
+	"dark_color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
@@ -22,6 +24,7 @@
 		"bower_components",
 		"chrome",
 		"credits",
+		"dist",
 		"log",
 		"node_modules",
 		"priv/static",
@@ -29,7 +32,7 @@
 		"zzzzz_this_is_fake"
 	],
 	"font_face": "Fira Code Retina",
-	"font_size": 10,
+	"font_size": 11,
 	"highlight_line": false,
 	"ignored_packages":
 	[
@@ -44,7 +47,7 @@
 		80,
 		120
 	],
-	"scroll_past_end": false,
+	"scroll_past_end": true,
 	"scroll_speed": 0.15,
 	"show_full_path": true,
 	"show_tab_close_buttons": true,
@@ -52,7 +55,9 @@
 	"soda_folder_icons": true,
 	"spacegray_sidebar_tree_small": true,
 	"tab_size": 2,
-	"theme": "Spacegray.sublime-theme",
+	"theme": "auto",
+	"dark_theme": "Spacegray.sublime-theme",
+	"light_theme": "Spacegray Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_command_mode_on_save": true,

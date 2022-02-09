@@ -13,8 +13,12 @@
       },
       "syntaxes": [
         "Packages/Elixir/Syntaxes/Elixir.tmLanguage",
-      ]
-    }
+      ],
+    },
+    "LSP-typescript":
+    {
+			"enabled": false,
+		},
   },
 
   // "eslint":

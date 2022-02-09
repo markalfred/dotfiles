@@ -1,5 +1,5 @@
 {
-  "disable_tab_abbreviations_for_scopes": "source.js.jsx",
+  "disable_tab_abbreviations_for_scopes": "source.jsx ",
   "preferences": {
     "stylus.valueSeparator": ": "
   },
@@ -8,6 +8,8 @@
       "attr_quotes": "single"
     }
   },
+  "ignore_scopes": ["source.js", "source.jsx"],
+  "tab_expand": true,
   "telemetry": false,
   "uid": "ecbcb2c5-9c8c-423e-a932-486503c66a6b"
 

@@ -6,5 +6,10 @@
   [
     {"icon": "dot", "mark_style": "solid_underline", "priority": 1, "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter", "types": ["warning"]},
     {"icon": "dot", "mark_style": "solid_underline", "priority": 1, "scope": "region.redish markup.deleted.sublime_linter markup.error.sublime_linter", "types": ["error"]}
-  ]
+  ],
+  "linters": {
+    "eslint": {
+      "selector": "source.ts, source.tsx, source.js, source.jsx"
+    }
+  }
 }
