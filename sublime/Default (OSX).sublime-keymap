@@ -201,7 +201,7 @@
   // Add a space inside JS curly brackets
   { "keys": [" "], "command": "insert_snippet", "args": {"contents": " $1 "}, "context":
     [
-      { "key": "selector", "operator": "equal", "operand": "source.js"},
+      { "key": "selector", "operator": "equal", "operand": "(source.js, source.jsx, source.ts, source.tsx)"},
       { "key": "setting.command_mode", "operand": false },
       { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
       { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
