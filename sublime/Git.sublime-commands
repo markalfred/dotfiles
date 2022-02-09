@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Git: Reset Last Commit",
+        "caption": "Git: Reset Last Commit (Undo)",
         "command": "shell_command",
         "args": {
             "command": "git reset HEAD^",
@@ -8,10 +8,10 @@
         }
     },
     {
-        "caption": "Git: Checkout Master",
+        "caption": "Git: Checkout Main",
         "command": "shell_command",
         "args": {
-            "command": "git checkout master",
+            "command": "git checkout main",
             "panel": true
         }
     },
