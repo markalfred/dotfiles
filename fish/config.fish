@@ -19,9 +19,6 @@ set PATH $PATH /usr/local/Python/bin
 set -x GOPATH /usr/local/Go
 set PATH $PATH /usr/local/Go/bin
 
-# Set gcloud application credentials key.
-set -x GOOGLE_APPLICATION_CREDENTIALS ~/Dropbox/credentials/lecture-genius-service-account-owner-key.json
-
 # Set work dir variable.
 set -U WORK_DIR $HOME/Repos
 
