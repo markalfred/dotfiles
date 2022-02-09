@@ -14,10 +14,13 @@ function make_project
   "settings":
   {
     // Project-specific, package-specific settings
-    // "CoffeeScript":
-    // {
-    //   "compileOnSave": true,
-    //   "sourceMaps":false
+    // "js_prettier": {
+    //   "prettier_options": {
+    //     "singleQuote": true,
+    //     "trailingComma": "all",
+    //     "semi": false,
+    //     "printWidth": 80,
+    //   }
     // }
   }
 }
