@@ -61,7 +61,7 @@
 	release = !git up && git checkout production && git merge main
 
 	undo = reset HEAD^
-	wip = !git add . && git commit -m WIP
+	wip = !git add . && git commit -m WIP --no-verify
 
 	open = !subl $(git status --short | awk '$1 ~ /^[^ ]/ {print $2}')
 	conflicts = !subl $(git status --short | awk '$1 ~ /^[AUD][AUD]/ {print $2}')
