@@ -5,6 +5,14 @@ function git
       if [ $confirm = y ]
         command git $argv
       end
+    else if [ -f = $argv[2] ]; or [ --force = $argv[2] ]
+      set -l confirm (input 'Use --force-with-lease instead? (Yn)')
+      if [ $confirm = n ]
+        command git $argv
+      else
+        echo "git push --force-with-lease"
+        command git push --force-with-lease
+      end
     else
       command git $argv
     end
