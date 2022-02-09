@@ -7,11 +7,6 @@ eval (/opt/homebrew/bin/brew shellenv)
 # Initialize asdf.
 source (brew --prefix asdf)/asdf.fish
 
-# Initialize rbenv.
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
-rbenv rehash >/dev/null
-
 # Add python bins.
 set PATH $PATH /usr/local/Python/bin
 
