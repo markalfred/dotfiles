@@ -1,0 +1,18 @@
+// Settings in here override those in "LSP-typescript/LSP-typescript.sublime-settings"
+
+{
+  "initializationOptions": {
+    "logVerbosity": "off",
+    "maxTsServerMemory": 0,
+    "plugins": [],
+    "preferences": {
+      "allowRenameOfImportPath": true,
+      "includeCompletionsForImportStatements": true,
+      "includeCompletionsForModuleExports": true,
+      "includeCompletionsWithInsertText": true,
+      "checkJs": false,
+      "allowJs": true
+    },
+  },
+  "selector": "source.ts, source.tsx"
+}
