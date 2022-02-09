@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+interface Props {}
+
+export const ${1:${TM_FILENAME/(^\w)|(-(\w))|(?:\.\w+)*$/\U$1$3/g}} = (props: Props) =>
+  ${4:<${5:div}>$0</${5:div}>}
+]]></content>
+    <tabTrigger>rfc</tabTrigger>
+    <scope>source.tsx</scope>
+    <description>React: functional typescript component skeleton</description>
+</snippet>
