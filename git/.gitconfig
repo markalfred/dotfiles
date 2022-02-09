@@ -71,3 +71,4 @@
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
 
 	delete-merged = !git branch --merged | grep -v "^*" | xargs -n 1 git branch -d
+	delete-squash-merged = !git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && echo "$branch is merged into master and can be deleted"; done
