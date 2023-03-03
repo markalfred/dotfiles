@@ -67,8 +67,4 @@ function fish_prompt
   end
 
   print $interactive_mode_color ' ⟩ ' $normal
-
-  if [ $interactive_mode ]
-    commandline -r "$interactive_cmd "
-  end
 end
