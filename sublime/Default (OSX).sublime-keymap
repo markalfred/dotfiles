@@ -234,4 +234,22 @@
           }
       ]
   },
+
+  // LSP: Find References
+  {
+      "keys": ["shift+primary+b"],
+      "command": "lsp_symbol_references",
+      "args": {"side_by_side": false, "force_group": true, "fallback": false, "group": -1},
+      "context": [{"key": "lsp.session_with_capability", "operand": "referencesProvider"}]
+  },
+  // LSP: Goto Definition
+  {
+      "keys": ["primary+b"],
+      "command": "lsp_symbol_definition",
+      "args": {"side_by_side": false, "force_group": true, "fallback": false, "group": -1},
+      "context": [
+          {"key": "lsp.session_with_capability", "operand": "definitionProvider"},
+          {"key": "auto_complete_visible", "operand": false}
+      ]
+  },
 ]
