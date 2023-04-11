@@ -39,3 +39,14 @@ alias mem 'mix ecto.migrate'
 alias mems 'mix ecto.migrations'
 
 fish_add_path /usr/local/sbin
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mark/google-cloud-sdk/path.fish.inc' ]; . '/Users/mark/google-cloud-sdk/path.fish.inc'; end
+
+# pnpm
+set -gx PNPM_HOME "/Users/mark/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
