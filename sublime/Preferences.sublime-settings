@@ -31,8 +31,8 @@
 		"tmp",
 		"zzzzz_this_is_fake"
 	],
-	"font_face": "Fira Code Retina",
-	"font_size": 11,
+	"font_face": "Fantasque Sans Mono",
+	"font_size": 13,
 	"highlight_line": false,
 	"ignored_packages":
 	[
