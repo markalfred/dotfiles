@@ -5,7 +5,8 @@
 [color]
 	ui = true
 [core]
-	editor = subl -ws
+	# editor = subl -ws
+	editor = cursor --wait
 	excludesfile = ~/.config/git/.gitignore_global
 	ignorecase = false
 [status]
@@ -63,12 +64,13 @@
 	undo = reset HEAD^
 	wip = !git add . && git commit -m WIP --no-verify
 
-	open = !subl $(git status --short | awk '$1 ~ /^[^ ]/ {print $2}')
-	conflicts = !subl $(git status --short | awk '$1 ~ /^[AUD][AUD]/ {print $2}')
+	open = !cursor $(git status --short | awk '$1 ~ /^[^ ]/ {print $2}')
+	open-from = "!cursor $(git diff-tree --no-commit-id --name-only -r $1) #"
+	conflicts = !cursor $(git status --short | awk '$1 ~ /^[AUD][AUD]/ {print $2}')
 
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
 
 	delete-merged = !git branch --merged | grep -v "^*" | xargs -n 1 git branch -d
-	delete-squash-merged = !git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && echo "$branch is merged into master and can be deleted"; done
+	delete-squash-merged = !git for-each-ref refs/heads/ '--format=%(refname:short)' | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse $branch\^{tree}) -p $mergeBase -m _)) == '-'* ]] && git branch -D $branch; done
