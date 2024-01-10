@@ -9,7 +9,7 @@
   ],
   "linters": {
     "eslint": {
-      "selector": "source.ts, source.tsx, source.js, source.jsx"
+      "selector": "source.ts, source.tsx, source.js, source.jsx, source.graphql"
     }
   }
 }

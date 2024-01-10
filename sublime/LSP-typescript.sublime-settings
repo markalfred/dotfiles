@@ -2,17 +2,18 @@
 
 {
   "initializationOptions": {
-    "logVerbosity": "off",
-    "maxTsServerMemory": 0,
+    "logVerbosity": "debug",
     "plugins": [],
+    "tsserver.logVerbosity":  "debug",
     "preferences": {
       "allowRenameOfImportPath": true,
       "includeCompletionsForImportStatements": true,
       "includeCompletionsForModuleExports": true,
       "includeCompletionsWithInsertText": true,
       "checkJs": false,
-      "allowJs": true
+      "allowJs": true,
     },
   },
-  "selector": "source.ts, source.tsx"
+  "selector": "source.ts, source.tsx",
+  "enabled": true,
 }

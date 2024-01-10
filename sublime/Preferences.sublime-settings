@@ -36,7 +36,12 @@
 	"highlight_line": false,
 	"ignored_packages":
 	[
-		"SublimeLinter-contrib-credo",
+		"A File Icon",
+		"JsPrettier",
+		"LSP",
+		"LSP-copilot",
+		"LSP-typescript",
+		"SublimeLinter-eslint",
 		"SublimeLinter-gotype",
 		"TypeScript",
 	],
@@ -62,4 +67,5 @@
 	"trim_trailing_white_space_on_save": true,
 	"vintage_command_mode_on_save": true,
 	"vintage_start_in_command_mode": true,
+	"index_files": true,
 }

@@ -2,12 +2,20 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"A File Icon",
+		"JsPrettier",
+		"LSP",
+		"LSP-copilot",
+		"LSP-typescript",
+		"SublimeLinter-eslint",
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"All Autocomplete",
 		"Babel",
 		"CSS Snippets",
+		"DotENV",
 		"Elixir",
 		"Emmet",
 		"fish",
@@ -17,6 +25,7 @@
 		"JSX",
 		"Local History",
 		"LSP",
+		"LSP-copilot",
 		"LSP-typescript",
 		"Naomi",
 		"Package Control",
