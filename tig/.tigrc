@@ -66,11 +66,13 @@ set blob-view	= line-number:no,interval=5 text
 set diff-view	= line-number:no,interval=5 text:yes,commit-title-overflow=no
 
 # UI display settings
-set show-changes		= yes		# Show changes commits in the main view?
+set show-changes		= no		# Show changes commits in the main view?
+set show-untracked	= no		# Show untracked changes in the main view?
 set wrap-lines			= no		# Wrap long lines in pager views?
 set tab-size			= 8		# Number of spaces to use when expanding tabs
 set line-graphics		= default	# Enum: ascii, default, utf-8
 set diff-highlight	= true
+set start-on-head		= yes		# Start on HEAD when no arguments are given?
 
 # Format reference names based on type.
 #  - head		: The current HEAD.
@@ -96,8 +98,8 @@ set show-notes			= yes		# When non-bool passed as `--show-notes=...` (diff)
 #set blame-options		= -C -C -C	# User-defined options for `tig blame` (blame)
 
 # Misc
-set refresh-mode		= auto	# Enum: manual, auto, after-command, periodic
-set refresh-interval		= 2		# Interval in seconds between refreshes
+set refresh-mode		= periodic	# Enum: manual, auto, after-command, periodic
+set refresh-interval		= 1		# Interval in seconds between refreshes
 set ignore-case			= yes		# Ignore case when searching?
 set focus-child			= yes		# Move focus to child view when opened?
 set horizontal-scroll		= 50%		# Number of columns to scroll as % of width
@@ -144,10 +146,10 @@ set mouse-scroll		= 2		# Number of lines to scroll via the mouse
 #   %(diffargs)		The diff options from `diff-options` or `TIG_DIFF_OPTS`
 #   %(prompt)		Prompt for the argument value.
 
-bind status	c	@git commit -v
-bind stage	c	@git commit -v
-bind status	C	@git commit -v --amend
-bind stage	C	@git commit -v --amend
+bind status	c	!>git commit -v
+bind stage	c	!>git commit -v
+bind status	C	!>git commit -v --amend
+bind stage	C	!>git commit -v --amend
 
 bind stash	P	?@git stash pop %(stash)
 bind stash	!	?@git stash drop %(stash)
@@ -155,11 +157,11 @@ bind refs	!	?git branch -D %(branch)
 bind main	!	!?git revert %(commit)
 bind diff	!	!?git revert %(commit)
 
-bind refs	c	:!git checkout %(branch)
-bind main	c	!?git checkout %(branch)
+bind refs	c	:!>git checkout %(branch)
+bind main	c	!?>git checkout %(branch)
 
-bind main	C	!?git checkout %(commit)
-bind diff	c	!?git checkout %(commit)
+bind main	C	!?>git checkout %(commit)
+bind diff	c	!?>git checkout %(commit)
 
 bind main	M	!?git merge %(commit)
 bind diff	M	!?git merge %(commit)
@@ -171,15 +173,20 @@ bind main	R	:!git rebase -i %(commit)^ # Rebase, starting at selected commit
 bind diff	R	:!git rebase -i %(commit)^
 bind refs	R	:!git rebase -i %(branch)
 
-bind main	f	!?git commit --fixup %(commit)
-bind diff	f	!?git commit --fixup %(commit)
+bind main	f	!?>git commit --fixup %(commit)
+bind diff	f	!?>git commit --fixup %(commit)
 
 bind refs	n	@git checkout -b "mb/%(prompt Enter branch name: mb/)"
 bind refs r @git branch -m "mb/%(prompt Enter branch name: mb/)"
 
-bind generic	U	!sh -c "git checkout master && git pull && git checkout - && git rebase master"
+# bind generic	U	!sh -c "git checkout master && git pull && git checkout - && git rebase master"
+bind status	U	@git add -u
+bind stage	U	@git add -u
 
 bind main	<C-P>	?!git push %(remote) "%(commit):%(prompt Enter branch name: )"
+
+# Copy commit ID to clipboard
+bind generic 9 @sh -c "echo %(commit) | pbcopy"
 
 # Normal commands
 # ---------------
@@ -379,8 +386,8 @@ color main-tracked		yellow	default	bold
 color main-ref			cyan	default
 color main-head			cyan	default	bold
 color stat-none			default	default
-color stat-staged		magenta	default
-color stat-unstaged		magenta	default
+color stat-staged		green	default
+color stat-unstaged		red	default
 color stat-untracked		magenta	default
 color help-group		blue	default
 color help-action		yellow	default
